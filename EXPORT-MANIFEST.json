@@ -1,0 +1,1170 @@
+{
+  "date": "2026-11-24",
+  "site": "https://kearly.de",
+  "sites_version": 14,
+  "source_commit": "c87735cfb0261ef5af337081e734b274ec43378c",
+  "kind": "original-source-handoff",
+  "google_ai_studio_import_tested": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 919,
+      "sha256": "183af68808ca88def711c8267eb24697f33eeb04b1bc4ae7c67cb9136e3b1856"
+    },
+    {
+      "path": ".npmrc",
+      "bytes": 48,
+      "sha256": "7cd80af2e968119afd7b1803b6ac51b51ea010b8da57c3606ea1ef8071a86068"
+    },
+    {
+      "path": "cloudflare-env.d.ts",
+      "bytes": 337,
+      "sha256": "a40d6190e14737c114f6ae90fbb090d6830fdfe5cccd747c583b5483cb03371b"
+    },
+    {
+      "path": "components.json",
+      "bytes": 441,
+      "sha256": "820e913f34219d16b5e7ec5865df9c444bb5b8acf230db4e589d660e4a21743e"
+    },
+    {
+      "path": "drizzle.config.ts",
+      "bytes": 155,
+      "sha256": "73d0807c58e541dc3eaf175909fb5acc966faed61f74ff659d9d55027bf3e25b"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "bytes": 874,
+      "sha256": "8ca86af56c21d433c46bfebeb8980b64b6d4ffa0dc3cf3d2ec1ad923b983f38c"
+    },
+    {
+      "path": "next.config.ts",
+      "bytes": 140,
+      "sha256": "a972c4f0ffa6dd714e7909b02d1ac19d2f2fe3d01f191efd2c5054bd6f142ec1"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 518710,
+      "sha256": "e224d3aa65e17c80c62fbfb9c38b871a4d675608ea7ce1373a979ff27990fd96"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2223,
+      "sha256": "68ae2671c97fdfc565988fed5eb766c55dfcca425b66228b457dd48390ff8941"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "bytes": 101,
+      "sha256": "7b299d3d3b16699ddda397c0b2373b3af4f25f8fc9ccc9b3d9e64ef083bc1c21"
+    },
+    {
+      "path": "raw-assets.d.ts",
+      "bytes": 81,
+      "sha256": "2f0dc0426364377051d7d89e17c952c5ebc4076230b0732ffb29e06364554b3b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6188,
+      "sha256": "fee7c96070511ca51d3e698b17467e06081e6dcf79cd7e7d1c23f2db2150cabc"
+    },
+    {
+      "path": "STARTPROMPT-GOOGLE-AI-STUDIO.txt",
+      "bytes": 2627,
+      "sha256": "f97544a86d6830e4fd7cb9fa7ef96808374f5cce925dd41e05fa3b3f53a33d1d"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 847,
+      "sha256": "755d473a6eb4f384deb37066c554995d9af3d3eb1e5b566ee7fbbf80a9dda208"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 3215,
+      "sha256": "9e4bb2e0cce6d4679bc88a30c3a448d97f2cb51ce302e2516a9b653d985c961b"
+    },
+    {
+      "path": ".openai/hosting.json",
+      "bytes": 100,
+      "sha256": "a627bd686fb130353ffa276b4b5ca365f0fa4ce7793a11b64d0080de7b81061b"
+    },
+    {
+      "path": "app/booking-readiness.ts",
+      "bytes": 1652,
+      "sha256": "5f7fc503a1d974893e2809b1a10ca0d2ee48df1d14d2c27d4be6f7c79fec7707"
+    },
+    {
+      "path": "app/brand.ts",
+      "bytes": 875,
+      "sha256": "30a85ded646c53d3322f8651f8d189f3d3561499455e922e3dec44b20ecae61a"
+    },
+    {
+      "path": "app/category-covers.json",
+      "bytes": 1063,
+      "sha256": "b523c08010d109609af22a95d548fdff71a18e4654aa169ee2a5ccb1b43b8cfc"
+    },
+    {
+      "path": "app/chatgpt-auth.ts",
+      "bytes": 2640,
+      "sha256": "e19651c2d1db12696883ae3eb79d4f09dce249f7afa1144a62d544e2e18299ca"
+    },
+    {
+      "path": "app/design-tokens.ts",
+      "bytes": 1085,
+      "sha256": "f4c27f407e88e6f1371b782f223ceea8c2212b8e13534fd432d19071c91c9b64"
+    },
+    {
+      "path": "app/globals.css",
+      "bytes": 65397,
+      "sha256": "1165c71437cc4cdde5c269063cc42ba92ef4c08b055afcdab6a33ec9fbaed5db"
+    },
+    {
+      "path": "app/inquiry-validation.ts",
+      "bytes": 3115,
+      "sha256": "c924e8733b593b413782ed3f910a2a2c5e57cc59d0b7efb95a34ecbb29096def"
+    },
+    {
+      "path": "app/layout.tsx",
+      "bytes": 854,
+      "sha256": "9acae0550bf5bd3772c7b10adce6507feaead0415a5c602d1b48072b4615ace4"
+    },
+    {
+      "path": "app/legal-links.ts",
+      "bytes": 698,
+      "sha256": "913e7d3f115dee5c83f158abf2b63b5025c1052ba5b6cf1112432ec44ba96036"
+    },
+    {
+      "path": "app/not-found.tsx",
+      "bytes": 515,
+      "sha256": "98da25d7021ec4fcd4e39abed492a0c29d043a18e32405751db8e92a88959295"
+    },
+    {
+      "path": "app/v07.css",
+      "bytes": 17885,
+      "sha256": "b1f30128c99f571129f2f3f8aab6476b21bf372ca7f2d46913cd28267d75e4e8"
+    },
+    {
+      "path": "app/workshop-config.ts",
+      "bytes": 9196,
+      "sha256": "f88c000d64dd7928487ef946b3037094c4ef3e725ac22c1a7340f86de0d2f05a"
+    },
+    {
+      "path": "app/anfragen/inquiry-management.ts",
+      "bytes": 833,
+      "sha256": "d13409699edcd138f114977f9908cb9d8672436f508203857fdfc0cd12491fb5"
+    },
+    {
+      "path": "app/anfragen/page.tsx",
+      "bytes": 7723,
+      "sha256": "38a7707376acf649228d57723152c85cff1619e37728d3156360c6c39f396cad"
+    },
+    {
+      "path": "app/anfragen/bearbeiten/route.ts",
+      "bytes": 2426,
+      "sha256": "1c7c72ee78f8cf2603f5214cc09d2371af1ef90c001926caa27edab4e2658cc1"
+    },
+    {
+      "path": "app/api/inquiries/route.ts",
+      "bytes": 6606,
+      "sha256": "6425cdff5279796c4d3ccd126f7b1691af1bd378e68f8e6ae22287447995c160"
+    },
+    {
+      "path": "app/api/workshop-photos/route.ts",
+      "bytes": 1242,
+      "sha256": "cabe6ece292faabda197ba3a57bda44e10ae1d28b19f045d3ed5c721b50189fc"
+    },
+    {
+      "path": "app/components/atelier-art.tsx",
+      "bytes": 12168,
+      "sha256": "39116814f6b5b6c1eda108845fb6c62980991641e4e61c8c1105e6cf4f4a2327"
+    },
+    {
+      "path": "app/components/brand-lockup.tsx",
+      "bytes": 807,
+      "sha256": "e3594f7e7e8e9a5c7f329445309533b2cf2082c875cc985d51ab25d3d921d69a"
+    },
+    {
+      "path": "app/components/design-library.tsx",
+      "bytes": 7335,
+      "sha256": "6105836f8fef0320bd61df4e1081ab18fb29dcc67ed97475707f576788a1d684"
+    },
+    {
+      "path": "app/components/studio-media.tsx",
+      "bytes": 3139,
+      "sha256": "d3edb7cd231f283bd227e16129b3a4dcb06aef0c92ef73e73ea32dbf173be0ed"
+    },
+    {
+      "path": "app/components/workshop-form.tsx",
+      "bytes": 13346,
+      "sha256": "5685ca3bc5ab8f75163c610a739b968bdf1f3131430d95376dbe6eba879bcaf7"
+    },
+    {
+      "path": "app/components/workshop-interactions.tsx",
+      "bytes": 10219,
+      "sha256": "033ab65d305af9539e5e3cd681685519e4982678977d8069631c0e33eb661cba"
+    },
+    {
+      "path": "app/components/workshop-landing.tsx",
+      "bytes": 959,
+      "sha256": "b63687f4f85020d035413fa9acc5d2389b1e8d0894a6c92bfcd780cb6acebb31"
+    },
+    {
+      "path": "app/components/workshop-photo.tsx",
+      "bytes": 1002,
+      "sha256": "cf60070a1ef3baabdf4e8fd31412b1b71426330e6626b71218ec3b4001c5d9ca"
+    },
+    {
+      "path": "app/components/workshop-preferences.tsx",
+      "bytes": 1015,
+      "sha256": "d0a4b728a2fa717645cfeacf2474f7d5b19fb3756a2511680596e36c6f7a317d"
+    },
+    {
+      "path": "app/components/workshop-sections.tsx",
+      "bytes": 11954,
+      "sha256": "4abc05887900bc74545422c8dea1e840c80fd66bf9e8153f53b6fff4ddbb2526"
+    },
+    {
+      "path": "app/datenschutz/page.tsx",
+      "bytes": 647,
+      "sha256": "48d46668163e389532f0edf4ed54ee4bed679af76a0b10128afbc0e14bfab53d"
+    },
+    {
+      "path": "app/design-system/page.tsx",
+      "bytes": 1686,
+      "sha256": "c20085c839de02ad7ab8683e3a95bdcfda967ffaea221a1b663c989074fe8f90"
+    },
+    {
+      "path": "app/impressum/page.tsx",
+      "bytes": 645,
+      "sha256": "03ba5244922615b04665839b27b6c1acb2ab123648ba7be555f974ddea9f3e6a"
+    },
+    {
+      "path": "app/workshop/page.tsx",
+      "bytes": 1322,
+      "sha256": "a94ad4e6b973d8511dde2d19b64cd6bec5628519b0646b35eaaf0b4c940fb957"
+    },
+    {
+      "path": "build/connector-preview-plugin.mjs",
+      "bytes": 7409,
+      "sha256": "c85dddfed97753d80de89050b5a1316b2b490cdfab2faa119a3417cb6e6c315c"
+    },
+    {
+      "path": "build/connector-preview-worker.mjs",
+      "bytes": 609,
+      "sha256": "59ceca541d1829448fbab94957acf1d396d5425a634d322c3b9763fe4501096e"
+    },
+    {
+      "path": "build/sites-vite-plugin.LICENSE",
+      "bytes": 1084,
+      "sha256": "3dd119f149df88296e82981a51e5131b1018ba2e2f2f6f4bbec2b83d58a43a45"
+    },
+    {
+      "path": "build/sites-vite-plugin.ts",
+      "bytes": 7415,
+      "sha256": "5b2d671313fe4ac10a1709e112d570da1267cb916f68655996a3ac3ea1dd80a9"
+    },
+    {
+      "path": "build/sites-worker.ts",
+      "bytes": 3941,
+      "sha256": "88d35cea06a09d53b29a89ff808f3fa4912b28e6f47eb5985524326af8be9f7f"
+    },
+    {
+      "path": "components/connector-error.tsx",
+      "bytes": 1118,
+      "sha256": "d5bdb3c9efc008a75c8563d546c802dff6c18c4dfdf2b98c3b8477969a943ec0"
+    },
+    {
+      "path": "components/ui/accordion.tsx",
+      "bytes": 2114,
+      "sha256": "810fded6b5f4f1d92370c8fa84b130cd9f26f1f37e30b1efcb48330338d91a70"
+    },
+    {
+      "path": "components/ui/alert-dialog.tsx",
+      "bytes": 5635,
+      "sha256": "1ca7530a1f4727642aa96c619a320bc21488eb3bd6cf00666ef6fa3b1e346de0"
+    },
+    {
+      "path": "components/ui/alert.tsx",
+      "bytes": 1680,
+      "sha256": "a36704ebac55c71e83302b1557d6bf188bb59552a46ea4e564acb4c913976926"
+    },
+    {
+      "path": "components/ui/aspect-ratio.tsx",
+      "bytes": 285,
+      "sha256": "cdcb1701d142b15ad09bd3982493b82c5eb17e6512b8d0719325e6e723850bbd"
+    },
+    {
+      "path": "components/ui/attachment.tsx",
+      "bytes": 6206,
+      "sha256": "c79fd808704543da1df455bbbdbcac7031979e126bafeadd2d5c97513b426159"
+    },
+    {
+      "path": "components/ui/avatar.tsx",
+      "bytes": 3025,
+      "sha256": "d37287410ad1f496bcbd788f94245542984e3a124008d9dc72f92afa0f96de27"
+    },
+    {
+      "path": "components/ui/badge.tsx",
+      "bytes": 1824,
+      "sha256": "9f25d280c75ac367fb5bbeea5f2f0f0fe10be226e364678b065069ec62dfaa06"
+    },
+    {
+      "path": "components/ui/breadcrumb.tsx",
+      "bytes": 2459,
+      "sha256": "1d179a7717f52c7aaceed5a305a4be38f3fc08c3aaf0f593de718ecb59b25ca1"
+    },
+    {
+      "path": "components/ui/bubble.tsx",
+      "bytes": 4824,
+      "sha256": "df3ead10c41081e73ef64e60cbff3f4ad7740af9fd2c21784294dee1504cbbc1"
+    },
+    {
+      "path": "components/ui/button-group.tsx",
+      "bytes": 2285,
+      "sha256": "90f87a3b4398540a58d8fb05559df0939d8073a7550a8af646d86c97145dd00e"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "bytes": 2456,
+      "sha256": "38447e736fdb7524f96f4adb6eada4ff9e4e68cf9eeb2415c357544ff347e8a3"
+    },
+    {
+      "path": "components/ui/calendar.tsx",
+      "bytes": 8052,
+      "sha256": "0349754fe228253ae94ba9f641d903fdb5917b502bef2087f8f5c6b0a93326ba"
+    },
+    {
+      "path": "components/ui/card.tsx",
+      "bytes": 2079,
+      "sha256": "d213fee777a9c38c3276b0e6b14707987302b83308baf4656dc1d5ae0610053f"
+    },
+    {
+      "path": "components/ui/carousel.tsx",
+      "bytes": 5797,
+      "sha256": "45c8d7786dcbc4e08ed3506fb8946f1c8abf1fa720b228792fe8430a56f3da6a"
+    },
+    {
+      "path": "components/ui/chart.tsx",
+      "bytes": 10991,
+      "sha256": "f60244582b56d42fb6631f9ac7026f3ea421d8cc31bfdda0e7727cae2a064687"
+    },
+    {
+      "path": "components/ui/checkbox.tsx",
+      "bytes": 1246,
+      "sha256": "afcdd47885bdfa92997ef8da0fe231ae19b728594f7448eb437f7d7e94fc5b4f"
+    },
+    {
+      "path": "components/ui/collapsible.tsx",
+      "bytes": 828,
+      "sha256": "c3649a69d53668fcceba2d83c97a3146fc2930a00c30fe281875238384e7bff2"
+    },
+    {
+      "path": "components/ui/combobox.tsx",
+      "bytes": 9468,
+      "sha256": "63f37425ab8eac82374dcb9d7ac4fec1406ffabd1c64006c59800f295fd43f6c"
+    },
+    {
+      "path": "components/ui/command.tsx",
+      "bytes": 5002,
+      "sha256": "67bc4de1f69b46c405ea1209a40a9b08a2e301aa8d36d3c54ce1b05c3039eb6e"
+    },
+    {
+      "path": "components/ui/context-menu.tsx",
+      "bytes": 8520,
+      "sha256": "0e0f98b6cf175912c541330f3b492476f8fa2712f13f265e8779ad0b93437d16"
+    },
+    {
+      "path": "components/ui/dialog.tsx",
+      "bytes": 4461,
+      "sha256": "7ba15f4c9dd993977d4d3dc70aef92d3e95548a32e5edc6f268c44921bbc15e8"
+    },
+    {
+      "path": "components/ui/direction.tsx",
+      "bytes": 528,
+      "sha256": "cd2c00d9757eea6dcf3242d71de8f397d29291a67fba5c39fb03c4c60746f36c"
+    },
+    {
+      "path": "components/ui/drawer.tsx",
+      "bytes": 4390,
+      "sha256": "9c21e1c99e256689192ab009f461568ea9ea99137b3b0e3010f56b7ee2bbd444"
+    },
+    {
+      "path": "components/ui/dropdown-menu.tsx",
+      "bytes": 8675,
+      "sha256": "fe670b2a67ac46915410a17cd5e4d529be2424c1b0fd8b8f41c178ac53ff6c3b"
+    },
+    {
+      "path": "components/ui/empty.tsx",
+      "bytes": 2500,
+      "sha256": "1523589e7664f743fc6cddf7daa7b7c030fbac6c5613a80f79478562277eda56"
+    },
+    {
+      "path": "components/ui/field.tsx",
+      "bytes": 6407,
+      "sha256": "ae5a1b6af5009609b3855acea85cf6cee9dd2698304d61995df458145319be53"
+    },
+    {
+      "path": "components/ui/form.tsx",
+      "bytes": 3924,
+      "sha256": "27d0cc0e59d9102f5287e857a5bf489e9cdd66f4d53cbfac8d0d967c7f2835b7"
+    },
+    {
+      "path": "components/ui/hover-card.tsx",
+      "bytes": 1570,
+      "sha256": "ce70a075f5422d9055eff971f1214b820806637d9fbce235df83206d1448cdb3"
+    },
+    {
+      "path": "components/ui/input-group.tsx",
+      "bytes": 5235,
+      "sha256": "dd5a0fc5dd10d7a829041ca19a3b8f040758761f657783dbae632c851ad10044"
+    },
+    {
+      "path": "components/ui/input-otp.tsx",
+      "bytes": 2331,
+      "sha256": "aa8d62769d9e9a0bf40aec5aa427a3a34be5852a6f61b390aa7aa5fa50ab3b46"
+    },
+    {
+      "path": "components/ui/input.tsx",
+      "bytes": 983,
+      "sha256": "44714284bdbafbf7634a4807eff5d6b493b5b5fc1a562a269a874de1eb50ea7c"
+    },
+    {
+      "path": "components/ui/item.tsx",
+      "bytes": 4679,
+      "sha256": "9ff8e5411d0684cb97a717c8c3498e6c11d56c21ce84dbcd6ba15f5167b1038b"
+    },
+    {
+      "path": "components/ui/kbd.tsx",
+      "bytes": 890,
+      "sha256": "087e34753566167ad99b8c69c6c0a3cfeaabf0d2a579e739ec1dd8d66910da1f"
+    },
+    {
+      "path": "components/ui/label.tsx",
+      "bytes": 630,
+      "sha256": "43e7cadacf1e0d71c1668dc388271656d2db8c4d45f2144d52d594f9aca31ca5"
+    },
+    {
+      "path": "components/ui/marker.tsx",
+      "bytes": 1933,
+      "sha256": "d94da269dd74ff4410393c57bd57bf965808314ce7cd5710e795a33f8b62240e"
+    },
+    {
+      "path": "components/ui/menubar.tsx",
+      "bytes": 8665,
+      "sha256": "1625b156556efa470d6a767596eb3237ece71fb5a799040f6921a367b1e26bc7"
+    },
+    {
+      "path": "components/ui/message-scroller.tsx",
+      "bytes": 4122,
+      "sha256": "abb2e962ef1d6952bb1caee7a135b079fedbd3833a1b871cd9079c880bbc0ffa"
+    },
+    {
+      "path": "components/ui/message.tsx",
+      "bytes": 2324,
+      "sha256": "a4a7f8a104559536a531e198d1a7a239cdd55748da74a0a3e2088f275e153287"
+    },
+    {
+      "path": "components/ui/native-select.tsx",
+      "bytes": 2057,
+      "sha256": "d62b4479c6419a37ee748b1a6536c51d6676a3a04afdea27619e6481b6cdb442"
+    },
+    {
+      "path": "components/ui/navigation-menu.tsx",
+      "bytes": 6826,
+      "sha256": "a42f6e39ce4b18d0cadfe91265b9419ddd8b157a9778a5ed754f45e72a902252"
+    },
+    {
+      "path": "components/ui/pagination.tsx",
+      "bytes": 2844,
+      "sha256": "9d9ba519da639b1993b7df95e8b0d394e8dc2c61fda7320c05ec1c5332ae56fb"
+    },
+    {
+      "path": "components/ui/popover.tsx",
+      "bytes": 2446,
+      "sha256": "2520e46424ba0ce4407c83c47cb717e1a5e7e51c26449b1eabeaeab779c05e76"
+    },
+    {
+      "path": "components/ui/progress.tsx",
+      "bytes": 787,
+      "sha256": "c6f42ff7f284ce9e965b1bad059dd401a951d6254e5070877b129ff8195c7707"
+    },
+    {
+      "path": "components/ui/radio-group.tsx",
+      "bytes": 1505,
+      "sha256": "45af968f5e426f9268a6623ccc55d67f1a0973742dd01f12917f981690d13a68"
+    },
+    {
+      "path": "components/ui/resizable.tsx",
+      "bytes": 1868,
+      "sha256": "bfb26b64a3c1d6e0a71bebe06738f209724588deb8ff3048a10f130ca920828a"
+    },
+    {
+      "path": "components/ui/scroll-area.tsx",
+      "bytes": 1697,
+      "sha256": "509e700a8f6a26386a0e61dcacc3f6b4fe42fa31c5444a2b27d9952e772b80fd"
+    },
+    {
+      "path": "components/ui/select.tsx",
+      "bytes": 6543,
+      "sha256": "f4434ef49e240b581e951cee362cb57e11e8a9bbbe4238395a034ba599ce298c"
+    },
+    {
+      "path": "components/ui/separator.tsx",
+      "bytes": 722,
+      "sha256": "8cdd3c705eb6b04bbe8fbe87cc5f193de72b17d85f02020f7e4e9bd206c50f59"
+    },
+    {
+      "path": "components/ui/sheet.tsx",
+      "bytes": 4331,
+      "sha256": "57d5e84b5b1ac6d1769dc53632b52236096140df8f3a4a10e8343bd73d186290"
+    },
+    {
+      "path": "components/ui/sidebar.tsx",
+      "bytes": 22249,
+      "sha256": "74ecebd633481b76e425e8b40c9cdad7e43c2872cd699d8a56690e889da9620b"
+    },
+    {
+      "path": "components/ui/skeleton.tsx",
+      "bytes": 289,
+      "sha256": "85957151311e53eb49bdb54f5e2e6d8ff4461b14d887d8073e0cde846d539691"
+    },
+    {
+      "path": "components/ui/slider.tsx",
+      "bytes": 2054,
+      "sha256": "deb4c937a6036d33236c8defcb6df42ba5886fef32dc1d67763eecfebcff5b69"
+    },
+    {
+      "path": "components/ui/sonner.tsx",
+      "bytes": 1074,
+      "sha256": "f4d2c855754828ceed89ad6455aa8082f80566d82c3ab79b8db5271c5102b632"
+    },
+    {
+      "path": "components/ui/spinner.tsx",
+      "bytes": 347,
+      "sha256": "cbf9073613aed22ffd4ba21219adc1d1b8dce311d4280800f772b5eae587eeff"
+    },
+    {
+      "path": "components/ui/switch.tsx",
+      "bytes": 1443,
+      "sha256": "21126011e315385b26ba57c494fa18553ac81f85f5814c3c9a79ff864ae66ee5"
+    },
+    {
+      "path": "components/ui/table.tsx",
+      "bytes": 2594,
+      "sha256": "02d16a0d04c4fd2990ef41d9c5963335aa0eec93d41518e18476656113894626"
+    },
+    {
+      "path": "components/ui/tabs.tsx",
+      "bytes": 3873,
+      "sha256": "3a200c6fa6d683681f066f1e9b3868ef22d3cf9d3d925d7364edae9900484aa3"
+    },
+    {
+      "path": "components/ui/textarea.tsx",
+      "bytes": 777,
+      "sha256": "d5084a2bc607d9e2322e440d36643610478982bc4ecd4ddf5ee2b805418e1198"
+    },
+    {
+      "path": "components/ui/toggle-group.tsx",
+      "bytes": 2391,
+      "sha256": "cf2efaaad5b80f1df4636a3e730fe0bfc25e55674fa37414c2f8f1ba02c20708"
+    },
+    {
+      "path": "components/ui/toggle.tsx",
+      "bytes": 1612,
+      "sha256": "961640a6cfdfd1cdfbc2196f6d4b8bc7a0606347769bc0d0d929bd50b6d86140"
+    },
+    {
+      "path": "components/ui/tooltip.tsx",
+      "bytes": 1887,
+      "sha256": "2ed212576e61f83f86a4ea00d40751181e5889b2bf8d660eede5d0adee46cb76"
+    },
+    {
+      "path": "db/index.ts",
+      "bytes": 437,
+      "sha256": "1bbd1a396bfcbeb114cfa66b70b9ffd79f85eaa729ca7a2800270776cf4864dd"
+    },
+    {
+      "path": "db/schema.ts",
+      "bytes": 1379,
+      "sha256": "6c5825bdc97976b18f494ecfb50a547f1ea43ed191431e2f4d4d92b791382c87"
+    },
+    {
+      "path": "docs/authority-v06.md",
+      "bytes": 11434,
+      "sha256": "36782683b4bb090e5d774c3a3c32cba6a3c5442f2ccbc934c2d92fe1e5feb9c2"
+    },
+    {
+      "path": "docs/authority-v07.md",
+      "bytes": 56491,
+      "sha256": "7d79519aec6a68d2e5de8a0c75b4ec2a9a2384e6e77e176031c7b447aec4e16f"
+    },
+    {
+      "path": "docs/design-system-v06.md",
+      "bytes": 3886,
+      "sha256": "930b65585c17d6166ed57a81d990f8cfe8644969139a21d202c979eb9aaa4956"
+    },
+    {
+      "path": "docs/logo-integration.md",
+      "bytes": 2085,
+      "sha256": "937f2d70de23681146f68ad5279de05895af8fb4700a780950249baaba0aab88"
+    },
+    {
+      "path": "docs/nrw-vergleich.md",
+      "bytes": 7143,
+      "sha256": "bb9ded8d6143484ab2a135f6f4b1ae9584610618d27201c1e60c2eb47d50fdb6"
+    },
+    {
+      "path": "docs/README-historisch-V07.md",
+      "bytes": 4651,
+      "sha256": "303dd731cd55c98e22158b86e454c8590c0eafd3c9fe772a1b2e8b62772ff99e"
+    },
+    {
+      "path": "docs/seo-public-2026-11-23.md",
+      "bytes": 5959,
+      "sha256": "e08fd945c03324b83b9b7183c3ef4ffe8727ca17de041e6ce27391ae649240e3"
+    },
+    {
+      "path": "docs/sites-runtime.md",
+      "bytes": 10246,
+      "sha256": "38723e35ecba86ae5e006db2395b18f1ae57ab24564688191e2d6d270823d98e"
+    },
+    {
+      "path": "docs/v07-implementation.md",
+      "bytes": 11978,
+      "sha256": "36d7c7c6d180028e83b52b8bad45a3eb9c468fed9468d84d3cf5a627e06a3abc"
+    },
+    {
+      "path": "drizzle/0000_round_edwin_jarvis.sql",
+      "bytes": 508,
+      "sha256": "7b65364f356027e6d318aaff784aabfe26c8b8848ed89014fe566821d9f96056"
+    },
+    {
+      "path": "drizzle/0001_wedding_inquiries.sql",
+      "bytes": 334,
+      "sha256": "f178af2ce1ce1344944686caa909f53aad8060751e09f425a0c72e1d2b28dc95"
+    },
+    {
+      "path": "drizzle/0002_inquiry_management.sql",
+      "bytes": 238,
+      "sha256": "0ef2c4c16459123d13944bff1cd72a07782206c21dfb94a1693a3ebc3f52fa0c"
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "bytes": 525,
+      "sha256": "e0d478985b1b7d208b9ee7d963225caee85e810fa9af695fb0f22bdec1e9b431"
+    },
+    {
+      "path": "drizzle/meta/0000_snapshot.json",
+      "bytes": 3268,
+      "sha256": "45ad65c71a9e1c519afd0a0901896f93dd07175e1f6cc07b6ef20d5daf1a4872"
+    },
+    {
+      "path": "drizzle/meta/0001_snapshot.json",
+      "bytes": 5046,
+      "sha256": "42dbd46d43e552213d5b3d4929d83c17aeba0a01f1972fc238f822343de9a46c"
+    },
+    {
+      "path": "drizzle/meta/0002_snapshot.json",
+      "bytes": 5652,
+      "sha256": "46086dd0d2e93cb5eca482b62bc851f64c980946a38acce168e2673186f3ae5e"
+    },
+    {
+      "path": "examples/d1/app/api/notes/route.ts",
+      "bytes": 1758,
+      "sha256": "b0b134b9b0b4a9f5947abbd13fd4425b88b59c64f91db1aacb0cecbc16c38f45"
+    },
+    {
+      "path": "examples/d1/db/schema.ts",
+      "bytes": 379,
+      "sha256": "1acd70317bcaf22cb140436fb47754c2144e7c2adfc59a3f427ecb1d816fa0f3"
+    },
+    {
+      "path": "hooks/use-mobile.ts",
+      "bytes": 584,
+      "sha256": "d2377fbad5ad2bdf7fa896a68c36ac8bf4aa74a974b2061f77b41ae58d623001"
+    },
+    {
+      "path": "lib/connector-context.ts",
+      "bytes": 629,
+      "sha256": "b6ed4b64aa9cc167c32ac4e6b43d6a35a40f5c4bd0a0cda2376edad09a794346"
+    },
+    {
+      "path": "lib/connector-contract.mts",
+      "bytes": 5535,
+      "sha256": "b8324851866ee9b24c2859bde2d1668a1181d02f77638f41c11f69886c87686a"
+    },
+    {
+      "path": "lib/connector-errors.mts",
+      "bytes": 2800,
+      "sha256": "d0f81b7de346e8662b1c64489b16007395db98ee69733c08b2ffa11068967ee6"
+    },
+    {
+      "path": "lib/connector-preview.d.ts",
+      "bytes": 445,
+      "sha256": "3c8745ae3593f71b02f2d4ade7b445b3c0fcbcd27934cbe4cc820afa24fa2f67"
+    },
+    {
+      "path": "lib/connectors.ts",
+      "bytes": 429,
+      "sha256": "0e52938a99ec674a94f3d855072fcf4f42563d0a974660ed6adc5c114ee44609"
+    },
+    {
+      "path": "lib/utils.ts",
+      "bytes": 183,
+      "sha256": "c2aa0cde88a8b5b5db7718003da1a345bdcce5f31085800b66ff0dddedfb0254"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 259,
+      "sha256": "64af8f322542eee06e995b175011ce51840862c911336fd932f697b29abdcdad"
+    },
+    {
+      "path": "public/file.svg",
+      "bytes": 393,
+      "sha256": "81a9ce5ca9bc60870c1d72c0fd5b98b2bc5c8c02b0e04fefeab9efcc11277228"
+    },
+    {
+      "path": "public/globe.svg",
+      "bytes": 1037,
+      "sha256": "13187c071b4d369df3a7a179f69a927165bf624e1a524ee6c93b7d3be75d6fc8"
+    },
+    {
+      "path": "public/robots.txt",
+      "bytes": 279,
+      "sha256": "0442e4a0643b89e8e59a674ae10d3e2a16d7e1efa267512bfb0e2690bb3e41ae"
+    },
+    {
+      "path": "public/sitemap.xml",
+      "bytes": 777,
+      "sha256": "4e328d384fb153efa492163189180639fbaa2f91ad24e248ee7573223796fa03"
+    },
+    {
+      "path": "public/window.svg",
+      "bytes": 387,
+      "sha256": "d3cd4bf0c1123258fcc266409856e28c93d4fc1cf8476702225e17842900ca63"
+    },
+    {
+      "path": "public/brand/kearly-candle-workshop-logo-1024.webp",
+      "bytes": 514788,
+      "sha256": "7c4c572b3e98eae5e43c1272ac0fa2e6645818452419f60d321a9e43e103bac7"
+    },
+    {
+      "path": "public/brand/kearly-candle-workshop-logo-256.webp",
+      "bytes": 48296,
+      "sha256": "21b4bafc471a7cac418ac615090259feb7bb6eb37daa990ba8a6790bb884a84a"
+    },
+    {
+      "path": "public/brand/kearly-candle-workshop-logo-512.webp",
+      "bytes": 149894,
+      "sha256": "582317e2e9618ac7d746708b6817b8de83a95d62985be7fba421ca4f744bfb3c"
+    },
+    {
+      "path": "public/brand/kearly-candle-workshop-logo.png",
+      "bytes": 1199592,
+      "sha256": "0100e52d883f2c0c61dee2f3ffd894d80c0ddea4c25e9063ce55ef9f0c612c61"
+    },
+    {
+      "path": "public/brand/kearly-candle-workshop-wortmarke.svg",
+      "bytes": 72893,
+      "sha256": "3f0cd147ea086666d313b5f9c8732cbaeff00a7a1be5b2c47c68725a86e0b99f"
+    },
+    {
+      "path": "public/fonts/DM-Sans-OFL.txt",
+      "bytes": 4482,
+      "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+    },
+    {
+      "path": "public/fonts/dm-sans.woff2",
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    {
+      "path": "public/fonts/instrument-serif-italic.woff2",
+      "bytes": 22128,
+      "sha256": "5a51946dfffa82972bc98745359c46761515641fda557c25116459a9f83da4a7"
+    },
+    {
+      "path": "public/fonts/Instrument-Serif-OFL.txt",
+      "bytes": 4498,
+      "sha256": "918aca23eab7bf6b4bec8b3155432bdfc17985d2fbb2516c2629785bd1feff42"
+    },
+    {
+      "path": "public/fonts/instrument-serif.woff2",
+      "bytes": 21032,
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31"
+    },
+    {
+      "path": "public/formenwelten/animals.webp",
+      "bytes": 86780,
+      "sha256": "7629362e1fca3852cd76859f934a582745e3658264ab2b8d9843b879fc816684"
+    },
+    {
+      "path": "public/formenwelten/botanical.webp",
+      "bytes": 70738,
+      "sha256": "21db8b4362c4dd87ab4230244fbfa78f29d0d3d96245dcd910e95ac7c270ddfd"
+    },
+    {
+      "path": "public/formenwelten/christmas.webp",
+      "bytes": 77516,
+      "sha256": "96b714f4fed77d93a61e4cc672d1c940845664869c6ec7ea6d8fbddce9ac9d88"
+    },
+    {
+      "path": "public/formenwelten/figures.webp",
+      "bytes": 61374,
+      "sha256": "ddb674cae3e220384bbe9689a802d86fa91a54c5d55c1ecf38a26cfc681cbdc1"
+    },
+    {
+      "path": "public/formenwelten/food.webp",
+      "bytes": 67906,
+      "sha256": "9711c1d2bdbbf0101e5694a754418fe65a433ab58409a1a658cf196981f20904"
+    },
+    {
+      "path": "public/formenwelten/halloween.webp",
+      "bytes": 65932,
+      "sha256": "e897404f5080e7c315504bedd0f678764c3ea6f81deb5030490eb23af152705f"
+    },
+    {
+      "path": "public/formenwelten/love.webp",
+      "bytes": 79308,
+      "sha256": "a00d2ce018351e595d7483f70bb916e5ef4e6bc9345cd6fed5f746196f70342e"
+    },
+    {
+      "path": "public/formenwelten/mini.webp",
+      "bytes": 82860,
+      "sha256": "3146730add2709f73c2e99923cd981e99a91a91a1de902f79ccd50b0ae737259"
+    },
+    {
+      "path": "public/formenwelten/modern.webp",
+      "bytes": 80896,
+      "sha256": "6347d7059117d357dc0ae33cd5e6f8b54ba0c326eda2d76d3c2c9b90508499ea"
+    },
+    {
+      "path": "public/formenwelten/seasonal.webp",
+      "bytes": 82088,
+      "sha256": "6ead46877438db17823314a1ee8357f971ccae283fe6adc3a894b0358a5a688e"
+    },
+    {
+      "path": "public/formenwelten/statement.webp",
+      "bytes": 81176,
+      "sha256": "2603a2ec99b93e546a2a75e384b7e2abdc8bbcb0a667fcd962849f8fee44f880"
+    },
+    {
+      "path": "public/marke/assets/cormorant.woff2",
+      "bytes": 22876,
+      "sha256": "8048ac209bec741e1c29cd0cfac5aac1c0c2ba8c3ddbd4a58fa9bd92ef5c63c2"
+    },
+    {
+      "path": "public/marke/assets/kearly.svg",
+      "bytes": 72666,
+      "sha256": "91e9cf3bc758c5c6626c14972a9c56d64643351ab84501ed0d267b5dcf9fc1c1"
+    },
+    {
+      "path": "public/marke/assets/kerzenlicht.webp",
+      "bytes": 102662,
+      "sha256": "9c38cdd7c68b2ca53353b23c1aeebe05e9d4f940fae5a42c25fce49c07e5348d"
+    },
+    {
+      "path": "public/marke/assets/kerzenworkshop.webp",
+      "bytes": 252820,
+      "sha256": "4948ef757d403c0c35f0c3c8a4072b35a71ecf3c7559830cff7876b7f74ea98a"
+    },
+    {
+      "path": "public/marke/assets/kevin-portrait.webp",
+      "bytes": 487754,
+      "sha256": "e2223b7b0a1797e50974e9172c5b44d8be394c42131954e293aef8d6d61677be"
+    },
+    {
+      "path": "public/marke/assets/style.css",
+      "bytes": 11204,
+      "sha256": "47b9c5086dc9ff969c8d43a8bbb03912fb061833b7427de1b3c43b988f25acb0"
+    },
+    {
+      "path": "public/marke/assets/wedding-tischdekoration.webp",
+      "bytes": 87132,
+      "sha256": "2c1086e684ad54893c9d936c6ea06c4fee7db61fc06c1f959e5e662033aa8044"
+    },
+    {
+      "path": "scripts/build-verified.sh",
+      "bytes": 687,
+      "sha256": "61024a70b28a732585428398f58ca96331b6850642683bf4a35297974a0125f4"
+    },
+    {
+      "path": "scripts/build-wedding.mjs",
+      "bytes": 1240,
+      "sha256": "b2fdb618f8d223c72b00f7d29c70f0896afdbff548f52cf9a827e56fe05d0b96"
+    },
+    {
+      "path": "scripts/execution-profile.mjs",
+      "bytes": 640,
+      "sha256": "2581f6f47a0903d0d6cb3b26def05fae88026a7ae8c88f5d7dabe5dbcbd6ee32"
+    },
+    {
+      "path": "scripts/export-design-views.mjs",
+      "bytes": 7839,
+      "sha256": "652e1c35d60727b7daa67db3bc84b6ae82d59f753a9a7552f88df3842535fd28"
+    },
+    {
+      "path": "scripts/install-ci.mjs",
+      "bytes": 1734,
+      "sha256": "de69b36bab9fcfd33716dcc23288e100887c2d4f27a6c6fbe0c6bea6d51dd09f"
+    },
+    {
+      "path": "scripts/install-ci.sh",
+      "bytes": 6976,
+      "sha256": "6d2252b4b08013828a2a44ba70ebcad0c3037b06cead346418eb1a5742b2fbf4"
+    },
+    {
+      "path": "scripts/install-pnpm.sh",
+      "bytes": 9231,
+      "sha256": "f918db24f6809b8b4fba5f9c4aace90d515a5b78154f23108dcab2c773d08cdb"
+    },
+    {
+      "path": "scripts/npm-install.mjs",
+      "bytes": 7256,
+      "sha256": "8892e92c00a9e27f448577a19dfbd1663605b6752235feb032bcc1405923bd4e"
+    },
+    {
+      "path": "scripts/pnpm-install.mjs",
+      "bytes": 10894,
+      "sha256": "c1d3c7d09c38e002669acbb53d9a68aa121f1d82f0fdc08ccde6d2331139437b"
+    },
+    {
+      "path": "scripts/run-framework.mjs",
+      "bytes": 1016,
+      "sha256": "72075798db6191995dee4e15ba5e0a5b0c23060ff0be4acc5be085062b27fcff"
+    },
+    {
+      "path": "scripts/sites-env.mjs",
+      "bytes": 928,
+      "sha256": "4cb12e49c5eec402d920cd98d74ebc3267c9a38b0f63445a619d4271979dd774"
+    },
+    {
+      "path": "scripts/sites-env.sh",
+      "bytes": 1582,
+      "sha256": "29bc00ff806de5fe25039b869e32e9a458e273555b139a09b4f9c1ed8f59df73"
+    },
+    {
+      "path": "scripts/connector-preview/connector-preview-session.mjs",
+      "bytes": 7069,
+      "sha256": "88a25f0ef4397e7e765b6cb6c193544b86f6593cb2c64b6fa1efefa386e59616"
+    },
+    {
+      "path": "scripts/connector-preview/host-binding.mjs",
+      "bytes": 8010,
+      "sha256": "9e6d5f28983cf09c3e34fb7fe81dd210ae9c792203e045cf73d1a0429586fed2"
+    },
+    {
+      "path": "scripts/connector-preview/protocol.mjs",
+      "bytes": 1841,
+      "sha256": "d26ce24ce374d1917941cd85943f9b3c709e0eaadd1bd9f30b030963634dae0a"
+    },
+    {
+      "path": "tests/inquiries.integration.mjs",
+      "bytes": 3283,
+      "sha256": "4f661af68e4882e1c327d86b0ef4b5675be2b67be9188dc9688986dbdb1350a9"
+    },
+    {
+      "path": "tests/public-seo.integration.mjs",
+      "bytes": 4181,
+      "sha256": "00fc4b985673ca104b15a64fa9c614913b4aecc9a5975523d8060de1690cba86"
+    },
+    {
+      "path": "tests/v07-content.audit.mjs",
+      "bytes": 5714,
+      "sha256": "47b3e08db8c0c672f88a8fcba43c0f92375f69b32db80412c17e076182b09077"
+    },
+    {
+      "path": "vendor/shadcn-tailwind-4.13.0.css",
+      "bytes": 16670,
+      "sha256": "f221d959e80b4738fba93b4b4f01472b11cccaf6043ba7f6f9376f6768dad28e"
+    },
+    {
+      "path": "vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+      "bytes": 1084,
+      "sha256": "a14c2d6fb5ba9925cba04633226a3b93e6c5566ca6b550dbfaead7ab3fa93b24"
+    },
+    {
+      "path": "wedding/datenschutz.html",
+      "bytes": 8690,
+      "sha256": "0bd3d14b1d5214f8bf09b47698e3dc44d097dc9c9081d5cfb11cf155fca05ce6"
+    },
+    {
+      "path": "wedding/generated.d.mts",
+      "bytes": 118,
+      "sha256": "de3a9b12047fbc81d35a39ea160455e94048ad0074420ce17afba4581ccb29e6"
+    },
+    {
+      "path": "wedding/home.html",
+      "bytes": 8064,
+      "sha256": "373f7f3b842566e8359876b5c63f0b43008774da3062c072493f535e2462b58f"
+    },
+    {
+      "path": "wedding/impressum.html",
+      "bytes": 1468,
+      "sha256": "7fa31f1c6c4d59de875a095ac70281e52827f3af4b19cb4e4e017f0ffbd34d0f"
+    },
+    {
+      "path": "wedding/content/images.json",
+      "bytes": 5732,
+      "sha256": "932484af707b9d3a5e66195ff1f7fe2154e11d6b7c4976978c8d5280809be925"
+    },
+    {
+      "path": "wedding/dist/_headers",
+      "bytes": 190,
+      "sha256": "efd0e136b7b6a63ca570b894f765347dd9d80dcab2a79f1acf594a83abbf4f98"
+    },
+    {
+      "path": "wedding/dist/404.html",
+      "bytes": 529,
+      "sha256": "4b592f64c629fa4aceb5eda44c0ec2dd85b80b7784de3bc4c070e72530cd4101"
+    },
+    {
+      "path": "wedding/dist/index.html",
+      "bytes": 21992,
+      "sha256": "444196312c4dc32c7bbf3db1147700273cfa77f4e57712c226c7ba7b9b3df31c"
+    },
+    {
+      "path": "wedding/dist/robots.txt",
+      "bytes": 279,
+      "sha256": "0442e4a0643b89e8e59a674ae10d3e2a16d7e1efa267512bfb0e2690bb3e41ae"
+    },
+    {
+      "path": "wedding/dist/sitemap.xml",
+      "bytes": 777,
+      "sha256": "4e328d384fb153efa492163189180639fbaa2f91ad24e248ee7573223796fa03"
+    },
+    {
+      "path": "wedding/dist/assets/app.js",
+      "bytes": 19908,
+      "sha256": "acc285e699939850c0ff5bc575b3f93dffb04ffc8ad38bfab445f85695fac08a"
+    },
+    {
+      "path": "wedding/dist/assets/consultation.js",
+      "bytes": 1492,
+      "sha256": "f5722c212765adc428dc78b5a408c897b47de111f0050e363773876e71b29388"
+    },
+    {
+      "path": "wedding/dist/assets/editorial.css",
+      "bytes": 27363,
+      "sha256": "07114ee42a4535b166d4ab5d502f17cc284fa2587787d40e8cc0e3d302636d2d"
+    },
+    {
+      "path": "wedding/dist/assets/favicon.svg",
+      "bytes": 269,
+      "sha256": "e2a91cf982b35583b441a9f79fb2b6b34514a0d87db7ead6623c15e5c1cddf45"
+    },
+    {
+      "path": "wedding/dist/assets/site-config.js",
+      "bytes": 67,
+      "sha256": "8672c906dfdb39ab5633e6649367cf8a1cfae55346dcaa58a85ea5a6a426d6fd"
+    },
+    {
+      "path": "wedding/dist/assets/styles.css",
+      "bytes": 35319,
+      "sha256": "487cc10699847aef0e226a0c5b29ac9aec0ba7446b484e3b0830754d2d253dff"
+    },
+    {
+      "path": "wedding/dist/assets/brand/kearly-original.png",
+      "bytes": 390076,
+      "sha256": "667b6b10a60f98dc021e29caa2cc6439ecf6a62515d6b5f40d4762d909dcb25e"
+    },
+    {
+      "path": "wedding/dist/assets/brand/kearly-wedding.svg",
+      "bytes": 72879,
+      "sha256": "8960356fff1f850836459b1419bd9e2393ddca03dfe713d4480a3ef199848868"
+    },
+    {
+      "path": "wedding/dist/assets/fonts/cormorant-italic.woff2",
+      "bytes": 23660,
+      "sha256": "e48e58027030df56869b795ca6f19b7012158275f7ad7cde1900b4a0b68d02e2"
+    },
+    {
+      "path": "wedding/dist/assets/fonts/Cormorant-OFL.txt",
+      "bytes": 4480,
+      "sha256": "b2306305139223cbc000c2b9feffaa741687056066c227ba34de31c98eda0814"
+    },
+    {
+      "path": "wedding/dist/assets/fonts/cormorant-regular.woff2",
+      "bytes": 22876,
+      "sha256": "8048ac209bec741e1c29cd0cfac5aac1c0c2ba8c3ddbd4a58fa9bd92ef5c63c2"
+    },
+    {
+      "path": "wedding/dist/assets/fonts/Manrope-OFL.txt",
+      "bytes": 4480,
+      "sha256": "4b8929f05a122b7abb9059501dc7dc4df86f8c97d5a1769d60d82cf2d2795dde"
+    },
+    {
+      "path": "wedding/dist/assets/fonts/manrope-regular.woff2",
+      "bytes": 24836,
+      "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+    },
+    {
+      "path": "wedding/dist/assets/fonts/manrope-semibold.woff2",
+      "bytes": 24836,
+      "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+    },
+    {
+      "path": "wedding/dist/datenschutz/index.html",
+      "bytes": 322,
+      "sha256": "2bea9df48526bcba620a1f97be146b78e30e9effe58267bff8fdec598317f677"
+    },
+    {
+      "path": "wedding/dist/faq/index.html",
+      "bytes": 10393,
+      "sha256": "55a1d4be8708509dabfacbcccaf3403f383c6968d0cbda89fe39c15c6fb69808"
+    },
+    {
+      "path": "wedding/dist/gastgeschenke/index.html",
+      "bytes": 12345,
+      "sha256": "1d233ee0fa87713796e61c9a3ab4748fb5fc239030a1d9544f25ba37b67ad258"
+    },
+    {
+      "path": "wedding/dist/hochzeit-anfragen/index.html",
+      "bytes": 21455,
+      "sha256": "b401df249e309af131252fdb067db78762ddce3f3d85c7dc4e21082a32c33f05"
+    },
+    {
+      "path": "wedding/dist/hochzeitsdeko/index.html",
+      "bytes": 10326,
+      "sha256": "0736cfab4763cc6882635dbc9ffb8ef5b10c02bcd3a9eceecf41880195bd4830"
+    },
+    {
+      "path": "wedding/dist/hochzeitskerze/index.html",
+      "bytes": 7630,
+      "sha256": "e9686e6975fdd9b23d19ace8d48b17adde690cd497aacff1db23326a5a1fa1bc"
+    },
+    {
+      "path": "wedding/dist/impressum/index.html",
+      "bytes": 314,
+      "sha256": "7a500242e104a5f5f578905fe257f19ebbb5a8e8996a8571744d5bb18fa30943"
+    },
+    {
+      "path": "wedding/dist/inspiration/index.html",
+      "bytes": 10519,
+      "sha256": "73e80f59d2841687e38da16893ace6e43c5825f56d3d7c5a2625e34bb80fe3c1"
+    },
+    {
+      "path": "wedding/dist/kontakt/index.html",
+      "bytes": 6993,
+      "sha256": "eb4d6d66be8c50bb82c3ac789987939c3bc8a82cc5a396f12a3573151e0553be"
+    },
+    {
+      "path": "wedding/dist/pakete-service/index.html",
+      "bytes": 14339,
+      "sha256": "f4b3f26f7994159a3afc4c554c439642ef34d07524ea5dc9944fa1c140638d5e"
+    },
+    {
+      "path": "wedding/dist/ueber-candlestore/index.html",
+      "bytes": 9392,
+      "sha256": "e9170bab5ca158643d32eee0d6491f63a438569bf171433e74aae2363cc0c4fc"
+    },
+    {
+      "path": "wedding/worker/index.js",
+      "bytes": 9268,
+      "sha256": "e475fdbba0442c703f9304f1847b8c6cfea102c42dad45c281629e7979f11dc1"
+    },
+    {
+      "path": "wedding/worker/photo-admin.js",
+      "bytes": 1330,
+      "sha256": "07d5c63e508701942bdaab4ac91d80220fccda5febd96fe3cca9e37a4b66ae2b"
+    }
+  ]
+}

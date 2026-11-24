@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /anfragen
+Disallow: /bildverwaltung
+Disallow: /wedding/bildverwaltung
+Disallow: /api/
+Disallow: /design-system
+Disallow: /signin-with-chatgpt
+Disallow: /signout-with-chatgpt
+Disallow: /callback
+
+Sitemap: https://kearly.de/sitemap.xml

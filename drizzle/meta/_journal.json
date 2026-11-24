@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792187593658,
+      "tag": "0000_round_edwin_jarvis",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1793715486431,
+      "tag": "0001_wedding_inquiries",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1793716814415,
+      "tag": "0002_inquiry_management",
+      "breakpoints": true
+    }
+  ]
+}

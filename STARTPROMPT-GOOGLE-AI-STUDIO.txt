@@ -1,0 +1,16 @@
+Du arbeitest an der bestehenden Website von Kearly. Lies zuerst README.md und prüfe die vorhandene Architektur. Überarbeite die Gestaltung auf Basis dieses Codes, des vorhandenen Logos und der lokalen Assets.
+
+Referenzen: https://kearly.de und https://kearly.de/workshop. Das Paket entspricht der veröffentlichten Sites-Version 14. Behandle die aktuelle Konfiguration in app/workshop-config.ts als Quelle für das Angebot; historische Dokumente können ältere Angaben enthalten.
+
+Ziel: Eine moderne, hochwertige und kreative Website mit einer fließenden visuellen Verbindung zur Kearly-Wortmarke. Bearbeite zunächst Typografie, Farben, Abstände, Bildführung, Karten, Navigation und mobile Darstellung. Erhalte die Dachmarke Kearly und die Angebote Workshop und Wedding. Die Workshop-Wortmarke liegt in public/brand/kearly-candle-workshop-wortmarke.svg.
+
+Stelle klar heraus: Die Teilnehmenden wählen Form, Farbe und Duft ihrer Kerzen selbst. Öffentliches Angebot: 39 Euro pro Person, ca. 2,5–3 Stunden, 4–9 Personen. Mobiler Wochenend-Workshop in Bochum und Umgebung bis 70 km; weitere Anfahrt nach geltender Pauschale. Private Gruppen werden individuell angefragt. Erhalte alle weiteren tatsächlichen Angebotsangaben. Erfinde keine Termine, Bewertungen, Auszeichnungen, Privatpreise oder Materialversprechen.
+
+Arbeite für das Design in den vorhandenen HTML-/TSX-/CSS-Dateien. Erhalte den Formularvertrag, Validierung, serverseitige Speicherung, Authentifizierung und Verwaltungszugriff. Erhalte die öffentliche Hauptdomain, die bevorzugte URL https://kearly.de/workshop, Canonicals, Meta-Angaben, strukturierte Daten, robots.txt, Sitemap, Impressum und Datenschutz. Die Vorschau soll keine echten Formulardaten an die Livewebsite senden.
+
+Die bestehende Serverarchitektur nutzt Vinext und Cloudflare Worker mit D1/R2 und Sites-Authentifizierung. Prüfe, ob sie in deiner Vorschau unterstützt wird. Falls nicht, erstelle eine gesonderte React/Vite-Designvorschau mit gekennzeichneten Demodaten und erhalte die Original-Serverdateien für die spätere Rückübernahme. Behaupte bei einem Demoformular keinen erfolgreichen Versand. Baue für diese Designaufgabe keine zusätzlichen KI-API-Funktionen, Zahlungsprozesse oder neue Authentifizierung ein.
+
+Prüfe Desktop und Mobilansicht, Tastaturbedienung, Lesbarkeit und Farbkontraste. Dokumentiere die geänderten Dateien, Vorschau-Anpassungen und noch nicht geprüften Funktionen. Liefere den überarbeiteten Quellcode zur späteren Übernahme in die bestehende Sites-Website.
+
+Meine konkreten Gestaltungswünsche:
+[Hier die gewünschten Änderungen ergänzen.]

@@ -1,0 +1,32 @@
+{
+  "animals": {
+    "alt": "Kerzenbeispiele: Igel, Hochlandrind mit Hut und Koala."
+  },
+  "botanical": {
+    "alt": "Kerzenbeispiele: Lotusblüte, Rose mit Stiel und Pfingstrose."
+  },
+  "modern": {
+    "alt": "Kerzenbeispiele: Ovale Spirale, gezackte Rillensäule und Knotenkugel."
+  },
+  "mini": {
+    "alt": "Kerzenbeispiele: kleiner Igel, Blütenherz und gerippte Muschel."
+  },
+  "statement": {
+    "alt": "Kerzenbeispiele: Hände mit Kugel, Drache auf Wellenbasis und Pferdekopf."
+  },
+  "figures": {
+    "alt": "Kerzenbeispiele: Sitzende Figur, verschleierte Büste und sitzende Buddhafigur."
+  },
+  "love": {
+    "alt": "Kerzenbeispiele: Hände mit Herz, Brautpaar im Rosenherz und Paar in Umarmung."
+  },
+  "food": {
+    "alt": "Kerzenbeispiele: Hochlandrind in einer Tasse, Rosentorte und Macaronbaum."
+  },
+  "christmas": {
+    "alt": "Kerzenbeispiele: Weihnachtsmann, Tannenbaum und Nussknacker."
+  },
+  "halloween": {
+    "alt": "Kerzenbeispiele: Hexenwichtel, Geist auf Kürbis und Totenkopf mit Rosenkranz."
+  }
+}
