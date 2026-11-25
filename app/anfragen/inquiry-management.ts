@@ -1,4 +1,3 @@
-import { env } from "cloudflare:workers";
 import { getChatGPTUser } from "../chatgpt-auth";
 
 export const inquiryStatuses = {
@@ -11,7 +10,7 @@ export const inquiryStatuses = {
 
 export async function canManageInquiries() {
   const user = await getChatGPTUser();
-  const allowed = env.WORKSHOP_ADMIN_EMAIL?.trim().toLowerCase();
+  const allowed = process.env.WORKSHOP_ADMIN_EMAIL?.trim().toLowerCase();
   return Boolean(allowed && user?.email.trim().toLowerCase() === allowed);
 }
 

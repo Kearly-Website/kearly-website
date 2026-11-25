@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  skipTrailingSlashRedirect: true,
+  outputFileTracingIncludes: {
+    "/**": ["./wedding/**/*"],
+  },
 };
 
 export default nextConfig;

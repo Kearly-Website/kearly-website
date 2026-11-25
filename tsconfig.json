@@ -42,6 +42,10 @@
   ],
   "exclude": [
     "node_modules",
-    "examples"
+    "examples",
+    "vite.config.ts",
+    "wedding/generated.d.mts",
+    "lib/connector-preview.d.ts",
+    "cloudflare-env.d.ts"
   ]
 }
