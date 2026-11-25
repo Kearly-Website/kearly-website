@@ -8,7 +8,8 @@ if (mode !== "dev" && mode !== "start") {
 }
 
 let port = process.env.PORT || "3000";
-let hostname = process.env.HOSTNAME || "0.0.0.0";
+// Cloud Run's HOSTNAME may identify the container; its ingress needs all interfaces.
+let hostname = "0.0.0.0";
 const passthrough = [];
 
 for (let i = 0; i < rawArgs.length; i += 1) {
