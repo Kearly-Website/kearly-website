@@ -1,77 +1,73 @@
-# Kearly – Website-Code für die Designüberarbeitung
+# Kearly – Bearbeitung in Google AI Studio
 
-Stand: 24.11.2026. Grundlage: die am 23.11.2026 veröffentlichte Sites-Version 14 von https://kearly.de.
-Commit: c87735cfb0261ef5af337081e734b274ec43378c.
+Stand: 25.11.2026. Das Projekt wurde in Google AI Studio importiert, mit GitHub verbunden und in beide Richtungen abgeglichen. Die mobile Vorschau einschließlich Navigation und Formularvalidierung wurde geprüft.
 
-## So startest du mit Google AI Studio
+**Veröffentlichungsstatus:** Der kostenlose Cloudflare-Pages-Build ist vorbereitet. Die Anmeldung und Repository-Verbindung bei Cloudflare sowie die anschließende Aktivierung auf kearly.de fehlen noch. Ein GitHub-Push verändert derzeit die bestehende Website nicht. Googles eigener Publish-Versuch ist gescheitert; eine kostenpflichtige Google-Cloud-Abrechnung wurde nicht eingerichtet.
 
-1. ZIP entpacken. Der Ordner enthält den bearbeitbaren Website-Code, Logo, lokale Bilder, Schriften und Formular-/Servercode.
-2. Den Inhalt des Projektordners in ein eigenes privates GitHub-Repository übernehmen. package.json gehört direkt in dessen Hauptverzeichnis. Die ZIP selbst ist kein importierbares GitHub-Repository.
-3. https://aistudio.google.com/apps öffnen und mit dem Google-Konto anmelden. Im Build-Bereich über das Plus-Menü (Add files) die Funktion Import from GitHub verwenden. Google-Zugriff gezielt auf dieses Repository beschränken, soweit die Oberfläche diese Auswahl anbietet.
-4. Den Text aus STARTPROMPT-GOOGLE-AI-STUDIO.txt einfügen und die gewünschten Designänderungen ergänzen.
-5. Das überarbeitete Projekt anschließend als ZIP herunterladen oder die Änderungen über GitHub bereitstellen. Für die Übernahme in die bestehende Sites-Veröffentlichung den Code wieder in diesem Codex-Chat bereitstellen.
+## Bearbeiten und später veröffentlichen
 
-Der GitHub-Import und Code-Export sind von Google dokumentiert: https://aistudio.google.com/docs/aistudio-build-mode.
-Die Übergabe wurde lokal erstellt und als ZIP geprüft. Ein Import in ein Google-Konto und eine Vorschau innerhalb von AI Studio wurden nicht durchgeführt.
+1. [Google-AI-Studio-Projekt öffnen](https://aistudio.google.com/apps/92325684-cd6d-4e51-8e11-93bbed953b00?showAssistant=true&showPreview=true).
+2. Vor neuen Arbeiten in Settings → GitHub den Sync-Status prüfen und angebotene Änderungen aus GitHub mit Pull übernehmen. Bei lokalen Änderungen zuerst die Unterschiede prüfen und sichern.
+3. Den gewünschten Auftrag eingeben und die Vorschau einschließlich mobiler Ansicht kontrollieren.
+4. Änderungen in Settings → GitHub prüfen und mit Push speichern. Arbeitsbranch: `codex/ai-studio-import`.
+5. **Nach der noch ausstehenden Cloudflare-Aktivierung:** Cloudflare baut und veröffentlicht nach jedem Push auf diesen Branch automatisch. Erst wenn der Build erfolgreich ist, wird der neue Stand ausgeliefert. Den Google-Button „Publish“ brauchen wir für diesen Weg nicht.
 
-## Was du dafür brauchst
+Beispielauftrag: „Überarbeite den Workshop-Hero passend zur Kearly-Wortmarke. Behalte den Preis von 39 €, die bestehenden URLs und die funktionierenden relativen Formularadressen bei. Prüfe das Menü in mobiler Ansicht.“
 
-- Ein Google-Konto mit Zugang zu Google AI Studio.
-- Für den oben beschriebenen Import ein GitHub-Konto und ein eigenes Repository.
-- Dieses Codepaket sowie deine Vorstellungen zu Farben, Schrift, Aufbau und Bildern.
-- Für reine Designänderungen muss keine Gemini- oder OpenAI-API-Funktion in die Website eingebaut werden.
+## Einmalige kostenlose Hosting-Einrichtung
 
-## Wichtige Dateien für das Design
+Bei Cloudflare **Workers & Pages → Create application → Pages → Connect to Git** auswählen. GitHub-Zugriff auf dieses Repository begrenzen:
+
+| Einstellung | Wert |
+| --- | --- |
+| Repository | `Kearly-Website/kearly-website` |
+| Produktionsbranch | `codex/ai-studio-import` |
+| Framework preset | None |
+| Build command | `npm run build:pages` |
+| Build output directory | `out` |
+| Root directory | Repository-Hauptverzeichnis |
+| Node.js | 22, über `.node-version` |
+| Bezahlte Dienste / API-Schlüssel | Für diesen statischen Build nicht erforderlich |
+
+Cloudflare Free unterstützt derzeit 500 Builds pro Monat, 20.000 Dateien und 25 MiB je Datei. [Limits](https://developers.cloudflare.com/pages/platform/limits/). [GitHub-Anbindung](https://developers.cloudflare.com/pages/configuration/git-integration/). GitHub Pages wird wegen der Einschränkungen für Unternehmenswebsites nicht verwendet.
+
+Nach dem ersten erfolgreichen Build die **tatsächlich zugeteilte stabile `https://….pages.dev`-Adresse** in diesem Codex-Chat übernehmen lassen. Erst nach Prüfung wird der vorbereitete Sites-Proxy aktiviert. Keine temporäre Vorschauadresse verwenden und die Domain nicht umziehen.
+
+## Was automatisch übernommen wird
+
+Öffentliche Gestaltung, Texte, Komponenten und lokale Bilder werden statisch gebaut. Der Build prüft Seiten, Überschriften, Canonicals und lokale Script-/Bilddateien. Neue normale App-Seiten werden automatisch erkannt. Dynamische Routen müssen vollständig vorgerendert sein. Neue serverseitige Funktionen, Server Actions, Datenbanken oder externe KI-Aufrufe erfordern eine eigene Backend-Integration.
+
+Kundendaten, Anfragen, Anmeldung und Fotoverwaltung bleiben beim bestehenden geschützten Sites-Backend. Im Browser unter kearly.de erreichen relative `/api/…`-Adressen dieses Backend. Die technische `pages.dev`-Adresse ist kein Kundenportal, wird auf `noindex` gesetzt und bietet keine eigene Anfragenspeicherung. Eine Vorschau darf nie erfolgreichen Versand behaupten, wenn nichts gespeichert wurde.
+
+Impressum, Datenschutz, robots.txt, Sitemap, Weiterleitungen sowie geschützte Verwaltungsbereiche werden von Sites bereitgestellt. Änderungen daran hier im Codex-Chat umsetzen und veröffentlichen lassen. Neue öffentliche URLs zusätzlich in die produktive Sitemap aufnehmen lassen. Das Schema vorhandener APIs und der Zugriffsschutz dürfen nicht beiläufig verändert werden.
+
+## Dateien für Designänderungen
 
 | Bereich | Dateien |
 | --- | --- |
-| Kearly-Hauptseite | wedding/home.html und public/marke/assets/style.css |
-| Workshop-Seitenaufbau | app/components/workshop-landing.tsx |
-| Workshop-Inhaltsblöcke | app/components/workshop-sections.tsx |
-| Navigation, Kategorien und private Workshops | app/components/workshop-interactions.tsx |
-| Workshop-Formular | app/components/workshop-form.tsx |
-| Workshop-Stile | app/globals.css und app/v07.css |
-| Aktuelle Angebotsdaten | app/workshop-config.ts |
-| Workshop-Logo und Markenangaben | app/brand.ts und public/brand/ |
-| Markenassets der Hauptseite | public/marke/assets/ |
-| Wedding-Seiten | wedding/dist/ und wedding/worker/ |
-| Impressum und Datenschutz | wedding/impressum.html und wedding/datenschutz.html |
-| SEO der Workshop-Seite | app/workshop/page.tsx |
-| Routing und Serverintegration | build/sites-worker.ts und vite.config.ts |
+| Dachmarken-Startseite | `wedding/home.html`, `public/marke/assets/` |
+| Workshop | `app/components/workshop-landing.tsx`, `workshop-sections.tsx`, `workshop-interactions.tsx` |
+| Workshop-Formular | `app/components/workshop-form.tsx` |
+| Farben und Layout | `app/globals.css`, `app/v07.css`, `app/design-tokens.ts` |
+| Angebot | `app/workshop-config.ts` |
+| Logo | `public/brand/kearly-candle-workshop-wortmarke.svg`, `app/brand.ts` |
+| Wedding | `wedding/dist/` |
+| Kostenloser Hosting-Build | `scripts/build-pages.mjs` |
 
-Die Wordmarke für den Workshop ist public/brand/kearly-candle-workshop-wortmarke.svg. Kearly ist die Dachmarke. Hauptseite, Workshop und Wedding sollen als zusammengehörige Marke wirken.
+## Angebot erhalten
 
-## Aktuelles Angebot erhalten
+Kearly ist die Dachmarke. Mobiler Workshop am Wochenende, Bochum und Umgebung bis 70 km; darüber hinaus Anfahrtspauschale. Öffentliches Angebot: **39 € pro Person, 4–9 Personen, ca. 2,5–3 Stunden, in der Regel 3–4 eigene Kerzen**. Form, Farbe und Duft selbst wählen; duftfrei möglich. Private Gruppen individuell anfragen und bepreisen. Keine erfundenen Termine, Bewertungen oder Verfügbarkeiten ergänzen. Historische Dokumente in `docs/` können frühere Angaben enthalten; maßgeblich ist die aktuelle Konfiguration.
 
-Der aktuelle Konfigurationscode ist maßgeblich: mobiler Workshop am Wochenende, Bochum und Umgebung im Umkreis von 70 km; darüber hinaus Anfahrtspauschale. Öffentliches Workshop-Angebot: 39 Euro pro Person, 4–9 Personen, ca. 2,5–3 Stunden, in der Regel 3–4 eigene Kerzen. Form, Farbe und Duft sind wählbar; duftfrei ist möglich. Private Gruppen werden individuell angefragt und bepreist. Keine erfundenen Termine, Bewertungen, Verfügbarkeiten oder Privatpreise ergänzen.
+## Lokal prüfen
 
-Einige Dokumente unter docs/ stammen aus früheren Versionen und nennen alte Teilnehmerzahlen oder einen privaten Vorschauzustand. Diese historischen Aussagen überschreiben weder die aktuelle Konfiguration noch den öffentlichen Stand von kearly.de. Der aktuelle SEO-Bericht ist docs/seo-public-2026-11-23.md; die Bestätigung des Google-Unternehmensprofils ist weiterhin nicht als abgeschlossen belegt.
-
-## Laufzeit und Formularfunktionen
-
-Die Originalwebsite verwendet React, TypeScript, Vinext, Vite und einen Cloudflare Worker. D1 speichert Anfragen; R2 speichert hochgeladene Fotos. Sites stellt Authentifizierung und produktive Bindings bereit. Das sind technische Integrationen, die nicht allein durch einen Codeimport zu Google umziehen.
-
-Das Paket enthält den Quellcode und die lokal versionierten Assets. Kundendatensätze, produktive Datenbankinhalte, R2-Uploads, Zugangsschlüssel und lokale Anmeldedaten werden nicht mitgeliefert. Bei Fotos aus R2 greifen die vorhandenen Fallback-Darstellungen, solange keine lokale Fotoanbindung besteht.
-
-Für die Vorschau in der Node-Laufzeit von Google AI Studio können Anpassungen an Vinext/Cloudflare nötig sein. Die Lauffähigkeit dort ist nicht bestätigt. Für die reine Designarbeit kann AI Studio bei Bedarf eine separate React/Vite-Vorschau mit ausdrücklich gekennzeichneten Demodaten erzeugen. Den Servercode für die spätere Übernahme erhalten. Ein Demoformular darf keinen erfolgreichen Versand behaupten und keine echten Daten an kearly.de senden.
-
-## Lokal am vollständigen Original arbeiten
-
-Node.js mindestens 22.13.0 und npm sind laut package.json erforderlich.
+Node.js mindestens 22.13.0:
 
 ```sh
 npm ci
 npm run dev
+npm run build:pages
 ```
 
-Produktionsbuild für die bestehende Architektur:
+Die Google-Vorschau verwendet Next.js mit Webpack. `build:pages` baut zunächst Next, startet kurz einen eigenen lokalen Produktionsserver und erzeugt ausschließlich die öffentliche Präsentation unter `out/`. Der GitHub-Workflow „Check free website build“ prüft denselben Build auf Linux und stellt das Ergebnis als kurzzeitig verfügbares Artefakt bereit. Er veröffentlicht selbst noch keine Website.
 
-```sh
-npm run build
-```
-
-prebuild erzeugt dabei wedding/generated.mjs aus den versionierten Wedding-Assets. Die Datei next-env.d.ts wird durch das Framework erzeugt. .openai/hosting.json enthält die Identität des bestehenden Sites-Projekts und die Binding-Namen, aber keinen Bearbeitungszugang und keine Zugangsschlüssel. Die mitgelieferte .gitignore schließt lokale Laufzeitdaten aus.
-
-## Änderungen wieder auf kearly.de übernehmen
-
-Eine Überarbeitung in Google AI Studio ändert die bestehende Sites-Veröffentlichung nicht automatisch. Für eine Designüberarbeitung kann kearly.de beim bisherigen Hosting bleiben. Vor dem Veröffentlichen der Änderungen müssen Darstellung, Formularspeicherung, geschützter Verwaltungszugriff, Fotofunktionen, Rechtslinks, Canonical, Weiterleitungen, robots.txt und Sitemap geprüft werden. Die produktive API, Authentifizierung und die SEO-Grundlagen erhalten. Ein vollständiger Wechsel zu Google Cloud wäre ein eigener Hosting- und Datenmigrationsschritt.
+Das ursprüngliche Sites-Paket liegt im Backup-Branch `codex/backup-v14-2026-11-25`, Commit `ad22ec3f326ef11a7fe152c6d17497bf32658e81`. Die bestehende öffentliche Website ist weiterhin Sites-Version 14. Der ursprüngliche Quellstand ist `c87735cfb0261ef5af337081e734b274ec43378c`. Die alte Übergabeanleitung unter `docs/README-UEBERGABE-V14.md` ist historisch.

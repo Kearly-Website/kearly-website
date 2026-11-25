@@ -1,0 +1,13 @@
+Dieses Projekt ist die öffentliche Kearly-Präsentation in Next.js/React mit Webpack. npm run dev verwendet scripts/next-server.mjs. Nicht auf Turbopack umstellen: die Interaktivität der eingebetteten Google-Vorschau wurde mit Webpack geprüft.
+
+Arbeitsrepo: Kearly-Website/kearly-website, Branch codex/ai-studio-import. Vor Bearbeitung GitHub-Sync prüfen und neue Commits pullen. Nach Prüfung Änderungen über GitHub Push speichern. Geplanter kostenloser Veröffentlichungsweg: GitHub → Cloudflare Pages → bestehende Domain kearly.de. Der Google-Publish-Button wird dafür nicht benötigt. Der Weg ist erst nach Cloudflare-Verbindung und Aktivierung des vorbereiteten Sites-Proxys live; siehe README.
+
+Öffentliche Seiten, Bilder und Komponenten dürfen verbessert werden. Das Angebot erhalten: 39 €/Person, 4–9 Personen, 2,5–3 Stunden, meist 3–4 Kerzen; Form, Farbe und Duft wählbar, auch duftfrei; mobiler Wochenend-Workshop rund um Bochum bis 70 km. Private Gruppen individuell anfragen. Keine erfundenen Termine, Preise, Bewertungen oder verfügbare Plätze.
+
+Kundendatenbank, Anfrageverwaltung, Betreiberanmeldung und Fotoverwaltung bleiben in Sites. Bestehende relative /api/-Adressen und das Formularschema erhalten. Die Google-Vorschau und der statische Export haben keine echte Anfragenspeicherung. Ohne Speicherung niemals eine Erfolgsmeldung vortäuschen. Keine echten Kundendaten in Vorschau/Repository kopieren, keine Secrets in Code schreiben.
+
+Impressum/Datenschutz, robots.txt, Sitemap und geschützte Pfade bleiben beim bestehenden Sites-Backend und werden über Codex gepflegt. Bestehende URLs, Canonicals auf https://kearly.de, Google-Verifizierung und strukturierte Daten erhalten. Neue Seiten benötigen eigene Metadaten und eine Aktualisierung der produktiven Sitemap über Codex.
+
+npm run build:pages ist der Veröffentlichungsbuild. Er exportiert öffentliche HTML-Seiten und statische Assets, prüft H1/Canonical/Assets und schließt Backend/Admin aus. Gewöhnliche neue Seiten werden erkannt; dynamische Routen müssen vorgerendert sein. Keine neuen Server Actions, serverabhängigen Seiten oder API-Funktionen hinzufügen, ohne die Backend-Integration ausdrücklich zu klären. Navigation mit normalen Links funktioniert auch im statischen Hosting.
+
+Vor Push mobile Ansicht, Menü, zentrale Links und Formularvalidierung prüfen; npm run build:pages muss erfolgreich sein. Ein fehlerhafter Cloudflare-Build soll die bisherige Veröffentlichung stehen lassen.
