@@ -7,8 +7,8 @@
   },
   "scripts": {
     "install:ci": "node scripts/install-ci.mjs",
-    "dev": "node scripts/next-server.mjs dev",
-    "build": "next build",
+    "dev": "node scripts/next-server.mjs dev --webpack",
+    "build": "next build --webpack",
     "start": "node scripts/next-server.mjs start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
