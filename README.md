@@ -1,8 +1,8 @@
 # Kearly – Bearbeitung in Google AI Studio
 
-Stand: 25.11.2026. Das Projekt wurde in Google AI Studio importiert, mit GitHub verbunden und in beide Richtungen abgeglichen. Die mobile Vorschau einschließlich Navigation und Formularvalidierung wurde geprüft.
+Stand: 26.11.2026. Das Projekt wurde in Google AI Studio importiert, mit GitHub verbunden und in beide Richtungen abgeglichen. Die mobile Vorschau einschließlich Navigation und Formularvalidierung wurde geprüft.
 
-**Veröffentlichungsstatus:** Der kostenlose Cloudflare-Pages-Build ist vorbereitet. Die Anmeldung und Repository-Verbindung bei Cloudflare sowie die anschließende Aktivierung auf kearly.de fehlen noch. Ein GitHub-Push verändert derzeit die bestehende Website nicht. Googles eigener Publish-Versuch ist gescheitert; eine kostenpflichtige Google-Cloud-Abrechnung wurde nicht eingerichtet.
+**Veröffentlichungsstatus:** Die zusammengeführten Design- und SEO-Änderungen mit 50 km Einsatzradius wurden am 26.11.2026 als **Sites-Version 15 auf https://kearly.de** veröffentlicht. Dafür wurden die geprüften Präsentationsdateien in das bestehende Sites-Projekt übernommen; Anfragen, Anmeldung und Fotoverwaltung bleiben dort erhalten. Die automatische Veröffentlichung aus GitHub über Cloudflare Pages ist weiterhin vorbereitet, aber noch nicht eingerichtet. Weitere GitHub-Pushes aktualisieren kearly.de deshalb noch nicht automatisch. Googles eigener Publish-Versuch war gescheitert; eine kostenpflichtige Google-Cloud-Abrechnung wurde nicht eingerichtet.
 
 ## Bearbeiten und später veröffentlichen
 
@@ -74,4 +74,4 @@ npm run build:pages
 
 Die Google-Vorschau verwendet Next.js mit Webpack. `build:pages` baut zunächst Next, startet kurz einen eigenen lokalen Produktionsserver und erzeugt ausschließlich die öffentliche Präsentation unter `out/`. Der GitHub-Workflow „Check free website build“ prüft denselben Build auf Linux und stellt das Ergebnis als kurzzeitig verfügbares Artefakt bereit. Er veröffentlicht selbst noch keine Website.
 
-Das ursprüngliche Sites-Paket liegt im Backup-Branch `codex/backup-v14-2026-11-25`, Commit `ad22ec3f326ef11a7fe152c6d17497bf32658e81`. Die bestehende öffentliche Website ist weiterhin Sites-Version 14. Der ursprüngliche Quellstand ist `c87735cfb0261ef5af337081e734b274ec43378c`. Die alte Übergabeanleitung unter `docs/README-UEBERGABE-V14.md` ist historisch.
+Das ursprüngliche Sites-Paket liegt im Backup-Branch `codex/backup-v14-2026-11-25`, Commit `ad22ec3f326ef11a7fe152c6d17497bf32658e81`. Zusätzlich sichern `codex/backup-pages-2026-11-26` und `codex/backup-ai-studio-2026-11-26` die beiden Arbeitsstände vor der Zusammenführung. Die öffentliche Website ist Sites-Version 15, deren nativer Quellstand `d0168760dd263a09eb82d1c07882f026aada3578` ist. Die übernommenen Präsentationsdateien stammen aus GitHub-Commit `cd6c05607f831a6e7181ab9f288931482e70e614`. Die alte Übergabeanleitung unter `docs/README-UEBERGABE-V14.md` ist historisch.

@@ -1,5 +1,7 @@
 Dieses Projekt ist die öffentliche Kearly-Präsentation in Next.js/React mit Webpack. npm run dev verwendet scripts/next-server.mjs. Nicht auf Turbopack umstellen: die Interaktivität der eingebetteten Google-Vorschau wurde mit Webpack geprüft.
 
+Veröffentlichungsstand 26.11.2026: Die zusammengeführten Design- und SEO-Änderungen mit 50 km wurden manuell über das bestehende Sites-Projekt als Version 15 auf https://kearly.de veröffentlicht und live geprüft. Die automatische GitHub-/Cloudflare-Pages-Verbindung ist weiterhin noch nicht aktiviert. Weitere Änderungen benötigen bis zu deren Aktivierung eine manuelle Sites-Veröffentlichung über Codex.
+
 Arbeitsrepo: Kearly-Website/kearly-website, Branch codex/ai-studio-import. Vor Bearbeitung GitHub-Sync prüfen und neue Commits pullen. Nach Prüfung Änderungen über GitHub Push speichern. Geplanter kostenloser Veröffentlichungsweg: GitHub → Cloudflare Pages → bestehende Domain kearly.de. Der Google-Publish-Button wird dafür nicht benötigt. Der Weg ist erst nach Cloudflare-Verbindung und Aktivierung des vorbereiteten Sites-Proxys live; siehe README.
 
 Öffentliche Seiten, Bilder und Komponenten dürfen verbessert werden. Das Angebot erhalten: 39 €/Person, 4–9 Personen, 2,5–3 Stunden, meist 3–4 Kerzen; Form, Farbe und Duft wählbar, auch duftfrei; mobiler Wochenend-Workshop rund um Bochum bis 50 km (am 26.11.2026 vom Eigentümer bestätigt). Private Gruppen individuell anfragen. Keine erfundenen Termine, Preise, Bewertungen oder verfügbare Plätze.
