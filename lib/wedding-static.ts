@@ -14,7 +14,8 @@ function resolveWeddingRoot(): string {
 }
 
 const WEDDING_ROOT = resolveWeddingRoot();
-const WEDDING_DIST_ROOT = path.resolve(WEDDING_ROOT, "dist");
+// Versioned source lives outside dist/ so AI Studio's importer retains it.
+const WEDDING_DIST_ROOT = path.resolve(WEDDING_ROOT, "site");
 
 const MIME_TYPES: Record<string, string> = {
   ".html": "text/html; charset=utf-8",

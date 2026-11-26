@@ -12,7 +12,7 @@ async function collect(directory, prefix = "") {
     }
   }
 }
-await collect("wedding/dist");
+await collect("wedding/site");
 assets["/assets/photo-admin.js"] = {type:types.js,data:(await readFile("wedding/worker/photo-admin.js")).toString("base64")};
 const slots = JSON.parse(await readFile("wedding/content/images.json","utf8"));
 const worker = await readFile("wedding/worker/index.js","utf8");

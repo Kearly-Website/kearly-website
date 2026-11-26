@@ -15,7 +15,7 @@ const inside = (base, target) => target.startsWith(base + path.sep);
 
 function run(args) {
   return new Promise((resolve, reject) => {
-    const child = spawn(process.execPath, args, { cwd: root, stdio: 'inherit' });
+    const child = spawn(process.execPath, args, { cwd: root, stdio: 'inherit', env: { ...process.env, NODE_ENV: 'production' } });
     child.once('error', reject);
     child.once('exit', code => code === 0 ? resolve() : reject(new Error(`Build exited with ${code}`)));
   });
@@ -34,7 +34,7 @@ async function filesUnder(directory) {
 }
 
 if (!process.argv.includes('--skip-build')) {
-  await run(['node_modules/next/dist/bin/next', 'build', '--webpack']);
+  await run(['scripts/next-server.mjs', 'build', '--webpack']);
 }
 
 // The build only replaces this fixed, generated directory inside this checkout.
@@ -44,7 +44,7 @@ await fs.mkdir(output, { recursive: true });
 await fs.cp(path.join(root, 'public'), output, { recursive: true });
 await fs.cp(path.join(root, '.next/static'), path.join(output, '_next/static'), { recursive: true });
 
-const weddingRoot = path.join(root, 'wedding/dist');
+const weddingRoot = path.join(root, 'wedding/site');
 const weddingFiles = await filesUnder(weddingRoot);
 for (const file of weddingFiles) {
   const rel = path.relative(weddingRoot, file);
@@ -83,7 +83,7 @@ await new Promise(resolve => socket.listen(0, '127.0.0.1', resolve));
 const port = socket.address().port;
 await new Promise(resolve => socket.close(resolve));
 const origin = `http://127.0.0.1:${port}`;
-const server = spawn(process.execPath, ['scripts/next-server.mjs', 'start', '--port', String(port), '--host', '127.0.0.1'], { cwd: root, stdio: 'inherit' });
+const server = spawn(process.execPath, ['scripts/next-server.mjs', 'start', '--port', String(port), '--host', '127.0.0.1'], { cwd: root, stdio: 'inherit', env: { ...process.env, NODE_ENV: 'production' } });
 let serverError;
 server.once('error', error => { serverError = error; });
 server.once('exit', code => { if (code !== 0) serverError = new Error(`Preview server exited: ${code}`); });

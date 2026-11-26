@@ -1,5 +1,4 @@
 import { spawn } from "node:child_process";
-import { cpSync, existsSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -81,47 +80,10 @@ if (mode === "build") {
   if (result.signal) process.kill(process.pid, result.signal);
   if (result.code !== 0) process.exit(result.code);
 
-  const standaloneDir = path.join(projectRoot, ".next/standalone");
-  if (existsSync(standaloneDir)) {
-    const staticSrc = path.join(projectRoot, ".next/static");
-    const staticDest = path.join(standaloneDir, ".next/static");
-    if (existsSync(staticSrc)) {
-      mkdirSync(path.dirname(staticDest), { recursive: true });
-      cpSync(staticSrc, staticDest, { recursive: true, force: true });
-    }
-    const publicSrc = path.join(projectRoot, "public");
-    const publicDest = path.join(standaloneDir, "public");
-    if (existsSync(publicSrc)) {
-      cpSync(publicSrc, publicDest, { recursive: true, force: true });
-    }
-    const weddingSrc = path.join(projectRoot, "wedding");
-    const weddingDest = path.join(standaloneDir, "wedding");
-    if (existsSync(weddingSrc)) {
-      cpSync(weddingSrc, weddingDest, { recursive: true, force: true });
-    }
-  }
   process.exit(0);
 }
 
 if (mode === "start") {
-  const standaloneServer = path.join(
-    projectRoot,
-    ".next/standalone/server.js",
-  );
-  if (existsSync(standaloneServer)) {
-    const result = await runAndForward(
-      [standaloneServer],
-      {
-        NODE_ENV: "production",
-        PORT: port,
-        HOSTNAME: hostname,
-      },
-      path.dirname(standaloneServer),
-    );
-    if (result.signal) process.kill(process.pid, result.signal);
-    process.exit(result.code);
-  }
-
   const result = await runAndForward(
     [nextBin, "start", "--port", port, "--hostname", hostname, ...passthrough],
     { NODE_ENV: "production" },

@@ -58,7 +58,7 @@ export function WorkshopHero() {
       <figure className="hero-visual">
         <StudioMedia slot={workshopConfig.imageSlots.hero} kind="pouring" />
         <figcaption className="hero-photo-caption">
-          Mobiler Kearly Candle Workshop – mit Formen, Farben und persönlicher Begleitung bei euch vor Ort.
+          Symbolbild für gemeinsame kreative Zeit.
         </figcaption>
       </figure>
     </section>
@@ -90,7 +90,7 @@ export function WorkshopExperience() {
           <figure className="overview-figure">
             <StudioMedia slot={workshopConfig.imageSlots.results} kind="materials" />
             <figcaption>
-              Handgegossene Designkerzen von Kearly – Form, Farbe und Duft gestaltet ihr selbst.
+              Gestaltungsidee für eine individuelle Motivkerze.
             </figcaption>
           </figure>
           <div className="overview-crosslink">

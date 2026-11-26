@@ -51,12 +51,16 @@ Impressum, Datenschutz, robots.txt, Sitemap, Weiterleitungen sowie geschützte V
 | Farben und Layout | `app/globals.css`, `app/v07.css`, `app/design-tokens.ts` |
 | Angebot | `app/workshop-config.ts` |
 | Logo | `public/brand/kearly-candle-workshop-wortmarke.svg`, `app/brand.ts` |
-| Wedding | `wedding/dist/` |
+| Wedding | `wedding/site/` |
 | Kostenloser Hosting-Build | `scripts/build-pages.mjs` |
 
 ## Angebot erhalten
 
-Kearly ist die Dachmarke. Mobiler Workshop am Wochenende, Bochum und Umgebung bis 70 km; darüber hinaus Anfahrtspauschale. Öffentliches Angebot: **39 € pro Person, 4–9 Personen, ca. 2,5–3 Stunden, in der Regel 3–4 eigene Kerzen**. Form, Farbe und Duft selbst wählen; duftfrei möglich. Private Gruppen individuell anfragen und bepreisen. Keine erfundenen Termine, Bewertungen oder Verfügbarkeiten ergänzen. Historische Dokumente in `docs/` können frühere Angaben enthalten; maßgeblich ist die aktuelle Konfiguration.
+Kearly ist die Dachmarke. Mobiler Workshop am Wochenende, Bochum und Umgebung bis **50 km (vom Eigentümer am 26.11.2026 bestätigt)**; darüber hinaus Anfahrtspauschale. Öffentliches Angebot: **39 € pro Person, 4–9 Personen, ca. 2,5–3 Stunden, in der Regel 3–4 eigene Kerzen**. Form, Farbe und Duft selbst wählen; duftfrei möglich. Private Gruppen individuell anfragen und bepreisen. Keine erfundenen Termine, Bewertungen oder Verfügbarkeiten ergänzen. Historische Dokumente in `docs/` können frühere Angaben enthalten; maßgeblich ist die aktuelle Konfiguration.
+
+Die versionierten Wedding-Seiten liegen unter `wedding/site/`. AI Studio ließ die früher unter `wedding/dist/` gespeicherten Quelldateien beim Abgleich aus. Die öffentlichen `/wedding/…`-Adressen bleiben gleich. Für den kostenlosen Pages-Export verwenden wir den regulären Next-Produktionsserver, keinen Cloud-Run-Standalone-Build; der Startwrapper erzwingt beim Build weiterhin `NODE_ENV=production`.
+
+Die vorhandenen Raum- und Motivbilder sind keine belegten Kearly-Workshopnachweise. Bildtexte und Metadaten beschreiben sie neutral als Symbolbild bzw. Gestaltungsidee. Foto-Uploads aus der bestehenden Bildverwaltung behalten Vorrang. Bei bestätigten eigenen Aufnahmen Bildbeschreibungen und Bildunterschriften passend aktualisieren.
 
 ## Lokal prüfen
 

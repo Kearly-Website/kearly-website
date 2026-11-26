@@ -22,7 +22,7 @@ export function buildWorkshopMetadata(): Metadata {
           url: WORKSHOP_OG_IMAGE_PATH,
           width: 1200,
           height: 900,
-          alt: "Einblick in einen mobilen Kearly Candle Workshop in Bochum und Umgebung.",
+          alt: "Symbolbild: Personen in einem Raum mit Sitzkissen und Kerzen.",
         },
       ],
     },

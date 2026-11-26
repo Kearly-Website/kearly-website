@@ -234,7 +234,7 @@ export const workshopConfig = {
     hero: {
       ...photo(
         "P1_FOTO_HERO",
-        "Einblick in einen mobilen Kearly Candle Workshop mit Teilnehmenden und selbst gegossenen Kerzen.",
+        "Symbolbild: Personen in einem Raum mit Sitzkissen und Kerzen.",
       ),
       src: "/marke/assets/kerzenworkshop.webp",
       approved: true,
@@ -265,13 +265,13 @@ export const workshopConfig = {
     results: {
       ...photo(
         "P1_FOTO_ERGEBNIS",
-        "Handgegossene Designkerzen von Kearly im warmen Kerzenlicht.",
+        "Gestaltungsidee: graue Kerze mit Hochlandrind-Motiv auf einer Holzkommode.",
       ),
       src: "/marke/assets/kerzenlicht.webp",
       approved: true,
       status: "APPROVED" as const,
-      width: 1200,
-      height: 900,
+      width: 960,
+      height: 1200,
     },
     materials: photo(
       "P1_FOTO_WORKSHOPTISCH",

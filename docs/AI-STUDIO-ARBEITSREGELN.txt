@@ -2,7 +2,9 @@ Dieses Projekt ist die öffentliche Kearly-Präsentation in Next.js/React mit We
 
 Arbeitsrepo: Kearly-Website/kearly-website, Branch codex/ai-studio-import. Vor Bearbeitung GitHub-Sync prüfen und neue Commits pullen. Nach Prüfung Änderungen über GitHub Push speichern. Geplanter kostenloser Veröffentlichungsweg: GitHub → Cloudflare Pages → bestehende Domain kearly.de. Der Google-Publish-Button wird dafür nicht benötigt. Der Weg ist erst nach Cloudflare-Verbindung und Aktivierung des vorbereiteten Sites-Proxys live; siehe README.
 
-Öffentliche Seiten, Bilder und Komponenten dürfen verbessert werden. Das Angebot erhalten: 39 €/Person, 4–9 Personen, 2,5–3 Stunden, meist 3–4 Kerzen; Form, Farbe und Duft wählbar, auch duftfrei; mobiler Wochenend-Workshop rund um Bochum bis 70 km. Private Gruppen individuell anfragen. Keine erfundenen Termine, Preise, Bewertungen oder verfügbare Plätze.
+Öffentliche Seiten, Bilder und Komponenten dürfen verbessert werden. Das Angebot erhalten: 39 €/Person, 4–9 Personen, 2,5–3 Stunden, meist 3–4 Kerzen; Form, Farbe und Duft wählbar, auch duftfrei; mobiler Wochenend-Workshop rund um Bochum bis 50 km (am 26.11.2026 vom Eigentümer bestätigt). Private Gruppen individuell anfragen. Keine erfundenen Termine, Preise, Bewertungen oder verfügbare Plätze.
+
+Die versionierten Wedding-Seiten liegen unter wedding/site/, damit der AI-Studio-Import sie nicht als dist-Buildausgabe auslässt. Die öffentlichen URLs bleiben /wedding/… . Bestehende Raum- und Motivbilder nur neutral als Symbolbild/Gestaltungsidee beschreiben; sie sind keine belegten Originalaufnahmen eines Kearly-Workshops. Die vorhandene Foto-API und ihre Vorrangfunktion erhalten.
 
 Kundendatenbank, Anfrageverwaltung, Betreiberanmeldung und Fotoverwaltung bleiben in Sites. Bestehende relative /api/-Adressen und das Formularschema erhalten. Die Google-Vorschau und der statische Export haben keine echte Anfragenspeicherung. Ohne Speicherung niemals eine Erfolgsmeldung vortäuschen. Keine echten Kundendaten in Vorschau/Repository kopieren, keine Secrets in Code schreiben.
 
