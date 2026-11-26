@@ -205,7 +205,7 @@ export const workshopConfig = {
     purchaseUrl: null as string | null,
     redemption: null,
   },
-  location: { city: "Bochum", radiusKm: 70 },
+  location: { city: "Bochum", radiusKm: 50 },
   legal: {
     imprintUrl: "https://kearly.de/impressum" as string | null,
     privacyUrl: "https://kearly.de/datenschutz" as string | null,
@@ -231,7 +231,17 @@ export const workshopConfig = {
     unapprovedAddons: ["frei kombinierbarer zusätzlicher Duft"],
   },
   imageSlots: {
-    hero: photo("P1_FOTO_HERO", "Hände beim Gießen im Kearly Candle Workshop."),
+    hero: {
+      ...photo(
+        "P1_FOTO_HERO",
+        "Einblick in einen mobilen Kearly Candle Workshop mit Teilnehmenden und selbst gegossenen Kerzen.",
+      ),
+      src: "/marke/assets/kerzenworkshop.webp",
+      approved: true,
+      status: "APPROVED" as const,
+      width: 1200,
+      height: 900,
+    },
     formVariety: photo(
       "P1_FOTO_FORMENVIELFALT",
       "Vorhandene Kearly-Formen und Kerzen in unterschiedlichen Größen.",
@@ -252,10 +262,17 @@ export const workshopConfig = {
       "P1_FOTO_GRUPPE",
       "Eine kleine Gruppe am Kearly-Workshoptisch.",
     ),
-    results: photo(
-      "P1_FOTO_ERGEBNIS",
-      "Unterschiedliche fertig gegossene Kearly-Kerzen.",
-    ),
+    results: {
+      ...photo(
+        "P1_FOTO_ERGEBNIS",
+        "Handgegossene Designkerzen von Kearly im warmen Kerzenlicht.",
+      ),
+      src: "/marke/assets/kerzenlicht.webp",
+      approved: true,
+      status: "APPROVED" as const,
+      width: 1200,
+      height: 900,
+    },
     materials: photo(
       "P1_FOTO_WORKSHOPTISCH",
       "Vorbereiteter Kearly-Workshoptisch mit Materialien.",
@@ -266,50 +283,50 @@ export const finishText =
   "Die Abholung vereinbaren wir individuell. Sie findet in der Regel zwei bis fünf Tage nach dem Workshop statt.";
 export const faqItems = [
   {
-    question: "Wie lange dauert der Workshop?",
-    answer: "Plane für deinen Kearly Candle Workshop etwa 2,5–3 Stunden ein.",
+    question: "Was bietet Kearly im mobilen Kerzenworkshop an?",
+    answer:
+      "Kearly bietet mobile Kerzengieß-Workshops für kleine Gruppen an. Du gestaltest und gießt deine eigenen Designkerzen – persönlich begleitet und direkt bei euch vor Ort.",
+  },
+  {
+    question: "Wo und wann findet der Workshop statt?",
+    answer: `Der Workshop findet am Wochenende mobil bei euch vor Ort statt. Ich komme im Umkreis von ${workshopConfig.location.radiusKm} km rund um ${workshopConfig.location.city} zu euch. Für weitere Anfahrten fällt eine Anfahrtspauschale an.`,
   },
   {
     question: "Wie viel kostet der Workshop?",
     answer:
-      "Der reguläre öffentliche Kearly Candle Workshop kostet 39 € pro Person.",
+      "Der öffentliche Kearly Candle Workshop kostet 39 € pro Person (4–9 Personen, ca. 2,5–3 Stunden). Private Gruppen werden individuell angefragt.",
   },
   {
-    question: "Wo und wann findet der Workshop statt?",
-    answer: `Der Workshop findet am Wochenende bei euch statt. Ich komme zu euch im Umkreis von ${workshopConfig.location.radiusKm} km um ${workshopConfig.location.city}. Für weitere Anfahrten fällt eine Anfahrtspauschale an.`,
-  },
-  {
-    question: "Wie viele Kerzen gieße ich?",
+    question: "Was ist im Workshop enthalten?",
     answer:
-      "Im Workshop kannst du in der Regel 3–4 eigene Kerzen gießen. Wie viele es genau werden, hängt von deinen gewählten Formen, deren Größe und der verfügbaren Zeit ab.",
+      "Im Preis enthalten sind Wachs und Materialien für in der Regel 3–4 eigene Kerzen, die Auswahl aus der Formenbibliothek, Farbe, Duft (oder duftfreie Gestaltung) sowie die persönliche Begleitung.",
   },
   {
-    question: "Welche Kerzenformen gibt es?",
+    question: "Was kann ich selbst auswählen?",
     answer:
-      "In der Kategorienübersicht findest du die verschiedenen Formenwelten. Welche einzelnen Formen an deinem Termin verfügbar sind, erfährst du vor Ort.",
+      "Form, Farbe und Duft wählst du direkt im Workshop selbst aus der aktuell verfügbaren Auswahl. Wenn du deine Kerzen pur magst, ist das Gießen jederzeit auch komplett duftfrei möglich.",
   },
   {
-    question: "Ist Farbe inklusive?",
+    question: "Wie läuft die Anfrage ab?",
     answer:
-      "Ja. Farbe ist im Workshoppreis enthalten. Deinen Farbton wählst du aus der aktuellen Auswahl direkt im Workshop.",
+      "Du schickst eine unverbindliche Anfrage mit Wunschtermin am Wochenende, Personenanzahl und Veranstaltungsort (mit PLZ). Anschließend prüfen wir den Termin, stimmen eure Wünsche und den Umfang ab und vereinbaren erst dann verbindlich euren Workshop.",
   },
   {
-    question: "Kann ich meine Kerzen beduften?",
+    question: "Wie lange dauert der Workshop und wie viele Kerzen gieße ich?",
     answer:
-      "Ja. Duft ist im Preis enthalten. Du wählst deinen Favoriten aus den beim Workshop verfügbaren Düften – oder du gießt deine Kerzen ganz ohne Duft.",
+      "Plane etwa 2,5–3 Stunden ein. In dieser Zeit entstehen in der Regel 3–4 eigene Kerzen – je nach gewählten Formen und deren Größe.",
   },
   {
     question: "Wie viele Personen nehmen teil?",
-    answer:
-      `Die Workshops finden mit maximal ${WORKSHOP_MAX_PARTICIPANTS} Personen statt. Öffentliche Workshops sind ab 4 Teilnehmenden geplant.`,
+    answer: `Die Workshops finden in kleinen Gruppen mit 4 bis maximal ${WORKSHOP_MAX_PARTICIPANTS} Personen statt.`,
   },
   {
     question: "Wie läuft die Abholung ab?",
     answer: finishText,
   },
   {
-    question: "Können wir als private Gruppe kommen?",
+    question: "Können wir als private Gruppe anfragen?",
     answer:
-      "Ja. Private Kearly Candle Workshops könnt ihr zum Beispiel für JGAs, Geburtstage, Freundesgruppen, Paare oder Firmenevents anfragen.",
+      "Ja. Private Kearly Candle Workshops könnt ihr zum Beispiel für JGAs, Geburtstage, Freundesgruppen, Paare oder Firmenevents individuell anfragen.",
   },
 ];

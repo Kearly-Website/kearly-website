@@ -11,12 +11,27 @@ import { BrandLockup } from "./brand-lockup";
 
 const navigation = [
   ["Kearly", "/"],
-  ["Wedding", "/wedding"],
-  ["Formen-Kategorien", "#gestalten"],
+  ["Wedding", "/wedding/"],
+  ["Überblick", "#ueberblick"],
+  ["Formenwelten", "#gestalten"],
   ["Ablauf", "#ablauf"],
-  ["Workshop & Preis", "#workshop"],
-  ["Private Workshops", "#privat"],
+  ["Preis", "#workshop"],
+  ["Privat", "#privat"],
 ];
+
+const editorialShapeOrder = [
+  { id: "botanical", layout: "feature-wide" },
+  { id: "modern", layout: "feature-side" },
+  { id: "animals", layout: "mid-medium" },
+  { id: "statement", layout: "mid-wide" },
+  { id: "mini", layout: "mid-tall" },
+  { id: "love", layout: "pair-side" },
+  { id: "figures", layout: "pair-wide" },
+  { id: "food", layout: "closing" },
+  { id: "christmas", layout: "closing" },
+  { id: "halloween", layout: "closing" },
+] as const;
+
 export function WorkshopNavigation() {
   const [open, setOpen] = useState(false);
   const button = useRef<HTMLButtonElement>(null);
@@ -39,7 +54,7 @@ export function WorkshopNavigation() {
         <a
           className="brand-home"
           href="#inhalt"
-          aria-label="Kearly Candle Workshop – Startseite"
+          aria-label="Kearly Candle Workshop – nach oben"
         >
           <BrandLockup loading="eager" />
         </a>
@@ -62,7 +77,7 @@ export function WorkshopNavigation() {
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           onClick={() => setOpen(!open)}
         >
-          <span />
+          <span aria-hidden="true" />
           {open ? "Schließen" : "Menü"}
         </button>
       </div>
@@ -79,12 +94,12 @@ export function WorkshopNavigation() {
             <Arrow diagonal />
           </a>
         ))}
+        <a href="#faq" onClick={() => setOpen(false)}>
+          Häufige Fragen
+          <Arrow diagonal />
+        </a>
         <a className="button" href="#anfrage" onClick={() => setOpen(false)}>
           Workshop anfragen <Arrow />
-        </a>
-        <a href="#faq" onClick={() => setOpen(false)}>
-          Fragen & Antworten
-          <Arrow />
         </a>
       </nav>
     </header>
@@ -93,24 +108,32 @@ export function WorkshopNavigation() {
 export function FormCategoryCard({
   world,
   index = 0,
+  layout = "closing",
 }: {
   world: (typeof shapeWorlds)[number];
   index?: number;
+  layout?: string;
 }) {
   const photo = workshopConfig.categoryPhotos[world.id];
   return (
     <article
-      className="form-category-card"
+      className={`form-category-card shape-item shape-item--${layout}`}
       data-image-slot={photo.id}
       data-photo-status={photo.status}
     >
-      <div className={photo.approved && photo.src ? "category-image category-image--photo" : "category-image"}>
+      <div
+        className={
+          photo.approved && photo.src
+            ? "category-image category-image--photo"
+            : "category-image"
+        }
+      >
         {photo.approved && photo.src ? (
           <img
             src={photo.src}
             alt={photo.alt}
-            width={photo.width ?? 400}
-            height={photo.height ?? 300}
+            width={photo.width ?? 880}
+            height={photo.height ?? 660}
             loading="lazy"
           />
         ) : (
@@ -126,6 +149,14 @@ export function FormCategoryCard({
   );
 }
 export function ShapeLibrary() {
+  const worldsById = new Map(shapeWorlds.map((world) => [world.id, world]));
+  const orderedWorlds = editorialShapeOrder
+    .map((entry) => {
+      const world = worldsById.get(entry.id);
+      return world ? { world, layout: entry.layout } : null;
+    })
+    .filter((entry): entry is NonNullable<typeof entry> => entry !== null);
+
   return (
     <section
       className="shape-library"
@@ -135,33 +166,48 @@ export function ShapeLibrary() {
       <div className="wrap">
         <div className="section-heading library-heading">
           <div>
+            <p className="eyebrow">01 / FORMENWELTEN</p>
             <h2 id="library-title">
-              Entdecke unsere Formenwelten.
-              <br />
-              <em>Welche wird deine?</em>
+              Formenwelten für eure <em>eigenen Kerzen.</em>
             </h2>
           </div>
           <div>
             <p>
-              Tiere, Blumen, Mini-Kerzen oder moderne Designs. Finde die
-              Kategorie, die zu deiner Idee passt.
+              Von floralen Blüten und klaren Skulpturen über Tiere und
+              Mini-Kerzen bis zu saisonalen Motiven: Ihr wählt eure Favoriten
+              direkt vor Ort aus.
             </p>
             <p className="library-availability">
-              Die Auswahl an einzelnen Formen kann je nach Termin variieren.
+              Welche einzelnen Formen an eurem Termin dabei sind, kann
+              variieren – eure endgültige Auswahl trefft ihr live am
+              Workshoptisch.
             </p>
           </div>
         </div>
-        <div className="form-category-grid">
-          {shapeWorlds.map((world, i) => (
-            <FormCategoryCard key={world.id} world={world} index={i} />
+        <div className="form-category-grid shape-editorial-grid">
+          {orderedWorlds.map(({ world, layout }, i) => (
+            <FormCategoryCard
+              key={world.id}
+              world={world}
+              index={i}
+              layout={layout}
+            />
           ))}
         </div>
         <div className="library-bottom">
-          <p>Die konkrete Auswahl entdeckst du direkt im Workshop.</p>
           <p>
-            Deine endgültige Auswahl triffst du im Workshop. Eine Wunschform ist
-            keine garantierte Reservierung.
+            Eine Wunschform aus den Beispielen ist keine garantierte
+            Reservierung – im Workshop steht euch immer eine vielfältige
+            Auswahl bereit.
           </p>
+          <div className="library-bottom-links">
+            <a className="text-link" href="#farbe-duft">
+              Weiter zu Farbe &amp; Duft <Arrow diagonal />
+            </a>
+            <a className="text-link" href="#anfrage">
+              Workshop anfragen <Arrow diagonal />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -235,9 +281,9 @@ export function PrivateWorkshops({
         <div>
           <p className="eyebrow">ZUSAMMEN WIRD’S PERSÖNLICH</p>
           <h2 id="private-title">
-            Euer Workshop.
+            Private Kerzenworkshops.{" "}
             <br />
-            <em>Eure Runde.</em>
+            <em>Für eure Runde.</em>
           </h2>
           <p>
             Ob JGA, Geburtstag, Date Night oder kreativer Nachmittag mit
@@ -295,16 +341,22 @@ export function PrivateWorkshops({
   );
 }
 export function MobileWorkshopCTA() {
-  const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(true);
   useEffect(() => {
+    const hero = document.querySelector(".hero");
     const form = document.getElementById("anfrage");
+    const visible = new Set<Element>();
     const observer = new IntersectionObserver(
-      (entries) =>
+      (entries) => {
         entries.forEach((entry) => {
-          if (entry.target === form) setHidden(entry.isIntersecting);
-        }),
-      { rootMargin: "-80px 0px -80px 0px", threshold: 0 },
+          if (entry.isIntersecting) visible.add(entry.target);
+          else visible.delete(entry.target);
+        });
+        setHidden(visible.size > 0);
+      },
+      { rootMargin: "-40px 0px -40px 0px", threshold: 0 },
     );
+    if (hero) observer.observe(hero);
     if (form) observer.observe(form);
     return () => observer.disconnect();
   }, []);

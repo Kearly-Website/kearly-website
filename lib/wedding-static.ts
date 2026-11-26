@@ -1,7 +1,19 @@
+import { existsSync } from "node:fs";
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 
-const WEDDING_ROOT = path.resolve(process.cwd(), "wedding");
+function resolveWeddingRoot(): string {
+  const candidates = [
+    path.resolve(process.cwd(), "wedding"),
+    path.resolve(process.cwd(), ".next/standalone/wedding"),
+  ];
+  for (const dir of candidates) {
+    if (existsSync(dir)) return dir;
+  }
+  return candidates[0];
+}
+
+const WEDDING_ROOT = resolveWeddingRoot();
 const WEDDING_DIST_ROOT = path.resolve(WEDDING_ROOT, "dist");
 
 const MIME_TYPES: Record<string, string> = {

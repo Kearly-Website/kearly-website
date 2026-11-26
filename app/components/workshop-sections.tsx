@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages -- Static HTML routes (/ and /wedding/) require full document navigation. */
 import { Arrow, Spark } from "./atelier-art";
 import { StudioMedia } from "./studio-media";
 import { brand } from "../brand";
@@ -6,81 +7,148 @@ import { BrandLockup } from "./brand-lockup";
 import { getLegalLinks } from "../legal-links";
 
 export function WorkshopHero() {
+  const { city, radiusKm } = workshopConfig.location;
   return (
     <section className="hero wrap" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <p className="eyebrow">MOBILER KERZENWORKSHOP · BOCHUM & UMGEBUNG</p>
+        <p className="eyebrow">
+          MOBILER KERZENWORKSHOP · {city.toUpperCase()} &amp; UMGEBUNG BIS {radiusKm} KM
+        </p>
         <h1 id="hero-title">
-          Euer Kerzenworkshop.<br />
-          <em>Bei euch vor Ort.</em>
+          Mobiler Kerzenworkshop in {city}{" "}
+          <br />
+          <em>und Umgebung.</em>
         </h1>
         <p className="hero-description">
-          Gießt gemeinsam eure eigenen Designkerzen – mit euren Lieblingsformen,
-          Farbe und Duft. Ich bringe den Workshop am Wochenende zu euch.
+          Gießt am Wochenende eure eigenen Designkerzen direkt bei euch vor Ort
+          – im Umkreis von {radiusKm} km rund um {city}. Form, Farbe und Duft
+          wählt ihr selbst, auch komplett duftfrei.
         </p>
-        <p>Im Umkreis von 70 km um Bochum. Weitere Anfahrt mit Pauschale.</p>
-        <div className="hero-facts">
-          <strong>
-            39 €<span>pro Person · öffentlicher Workshop</span>
-          </strong>
-          <span>ca. 2,5–3 Stunden</span>
-          <span>in der Regel 3–4 Kerzen</span>
-          <span>4–{WORKSHOP_MAX_PARTICIPANTS} Personen</span>
-        </div>
+        <dl className="hero-keyfacts" aria-label="Wichtige Eckdaten zum Kerzenworkshop">
+          <div>
+            <dt>39 €</dt>
+            <dd>pro Person · öffentlich</dd>
+          </div>
+          <div>
+            <dt>4–{WORKSHOP_MAX_PARTICIPANTS} Personen</dt>
+            <dd>kleine Runde</dd>
+          </div>
+          <div>
+            <dt>ca. 2,5–3 Std.</dt>
+            <dd>meist 3–4 Kerzen</dd>
+          </div>
+          <div>
+            <dt>Privat</dt>
+            <dd>individuell anfragen</dd>
+          </div>
+        </dl>
         <div className="hero-actions">
           <a className="button" href="#anfrage">
             Workshop anfragen <Arrow />
           </a>
-          <a className="text-link" href="#workshop">
-            Leistungen &amp; Preis <Arrow diagonal />
+          <a className="text-link" href="#gestalten">
+            Formenwelten ansehen <Arrow diagonal />
           </a>
         </div>
-        <p className="hero-request-note">Unverbindlich anfragen. Für private Gruppen stimmen wir Preis und Umfang individuell ab.</p>
+        <p className="hero-request-note">
+          Unverbindliche Anfrage für Wochenendtermine. Weitere Anfahrten über{" "}
+          {radiusKm} km sind mit Anfahrtspauschale möglich.
+        </p>
       </div>
-      <div className="hero-visual">
+      <figure className="hero-visual">
         <StudioMedia slot={workshopConfig.imageSlots.hero} kind="pouring" />
-      </div>
+        <figcaption className="hero-photo-caption">
+          Mobiler Kearly Candle Workshop – mit Formen, Farben und persönlicher Begleitung bei euch vor Ort.
+        </figcaption>
+      </figure>
     </section>
   );
 }
 
 export function WorkshopExperience() {
+  const { city, radiusKm } = workshopConfig.location;
   return (
     <section
-      className="glance wrap"
+      className="overview-section wrap"
       id="ueberblick"
-      aria-labelledby="glance-title"
+      aria-labelledby="overview-title"
     >
-      <div className="glance-heading">
-        <h2 id="glance-title">Der Workshop auf einen Blick</h2>
-        <p>Kleine Runde. Große Auswahl. Viel Raum für deine Ideen.</p>
+      <div className="overview-header">
+        <div>
+          <p className="eyebrow">AUF EINEN BLICK</p>
+          <h2 id="overview-title">
+            Was Kearly anbietet – und wie euer <em>Workshop</em> funktioniert.
+          </h2>
+        </div>
+        <p className="overview-lead">
+          Alle wichtigen Antworten zu Angebot, Einsatzgebiet, Auswahl, Preis und
+          Ablauf der Anfrage – klar und ohne Umwege.
+        </p>
       </div>
-      <dl className="glance-facts">
-        <div>
-          <dt>3–4</dt>
-          <dd>
-            Eigene Kerzen<span>in der Regel</span>
-          </dd>
+      <div className="overview-grid">
+        <div className="overview-media">
+          <figure className="overview-figure">
+            <StudioMedia slot={workshopConfig.imageSlots.results} kind="materials" />
+            <figcaption>
+              Handgegossene Designkerzen von Kearly – Form, Farbe und Duft gestaltet ihr selbst.
+            </figcaption>
+          </figure>
+          <div className="overview-crosslink">
+            <span>Ihr plant eine Hochzeit?</span>
+            <a className="text-link" href="/wedding/">
+              Zu Kearly Wedding <Arrow diagonal />
+            </a>
+          </div>
         </div>
-        <div>
-          <dt>Formenwelten</dt>
-          <dd><a href="#gestalten">Alle Kategorien ansehen</a></dd>
+        <div className="overview-body">
+          <dl className="overview-qa">
+            <div>
+              <dt>Was bietet Kearly an?</dt>
+              <dd>
+                Einen mobilen Kerzengieß-Workshop in kleiner Runde (4–{WORKSHOP_MAX_PARTICIPANTS} Personen).
+                In etwa 2,5–3 Stunden entstehen meist 3–4 eigene Designkerzen – persönlich begleitet vom ersten Gießen bis zum Finish.
+              </dd>
+            </div>
+            <div>
+              <dt>Wo und wann findet es statt?</dt>
+              <dd>
+                Am Wochenende mobil bei euch vor Ort – rund um {city} bis {radiusKm} km.
+                Für weiter entfernte Orte außerhalb dieses Umkreises fällt eine Anfahrtspauschale an.
+              </dd>
+            </div>
+            <div>
+              <dt>Was ist enthalten &amp; was wähle ich selbst?</dt>
+              <dd>
+                Wachs, Werkzeuge, Zugang zur{" "}
+                <a href="#gestalten">Formenbibliothek</a> sowie{" "}
+                <a href="#farbe-duft">Farbe und Duft</a> sind im Preis enthalten.
+                Form, Farbton und Duft wählt ihr vor Ort selbst – auf Wunsch gießt ihr komplett duftfrei.
+              </dd>
+            </div>
+            <div>
+              <dt>Was kostet der Workshop?</dt>
+              <dd>
+                Das öffentliche Angebot kostet <strong>39 € pro Person</strong>.
+                Für <a href="#privat">private Gruppen</a> – etwa JGA, Geburtstag, Freundeskreis oder Team – erstellen wir nach eurer Anfrage ein individuelles Angebot.
+              </dd>
+            </div>
+            <div>
+              <dt>Wie läuft die Anfrage ab?</dt>
+              <dd>
+                Über das <a href="#anfrage">Anfrageformular</a> schickt ihr unverbindlich Wunschtermin am Wochenende, Personenanzahl und Ort (mit PLZ). Wir prüfen die Verfügbarkeit, stimmen eure Wünsche ab und vereinbaren erst dann verbindlich euren Termin.
+              </dd>
+            </div>
+          </dl>
+          <div className="overview-actions">
+            <a className="text-link" href="#anfrage">
+              Unverbindlich anfragen <Arrow diagonal />
+            </a>
+            <a className="text-link" href="#workshop">
+              Alle Leistungen im Detail <Arrow diagonal />
+            </a>
+          </div>
         </div>
-        <div>
-          <dt>Max. {WORKSHOP_MAX_PARTICIPANTS}</dt>
-          <dd>Personen in der Gruppe</dd>
-        </div>
-        <div>
-          <dt>2,5–3 h</dt>
-          <dd>Workshopzeit</dd>
-        </div>
-        <div>
-          <dt>Inklusive</dt>
-          <dd>
-            Farbe &amp; Duft<span>duftfrei möglich</span>
-          </dd>
-        </div>
-      </dl>
+      </div>
     </section>
   );
 }
@@ -95,11 +163,11 @@ export function ColorScentSelection() {
       <div className="wrap">
         <div className="section-heading">
           <h2 id="selection-title">
-            Mach sie zu <em>deinen.</em>
+            Farbe &amp; Duft frei wählen – <em>auch duftfrei.</em>
           </h2>
           <p>
             Deine Form steht fest? Mit Farbe und Duft gibst du deinen Kerzen
-            ihren eigenen Charakter.
+            ihren eigenen Charakter – oder hältst sie ganz pur.
           </p>
         </div>
         <div className="selection-editorial">
@@ -158,7 +226,7 @@ export function WorkshopProcess() {
       aria-labelledby="process-title"
     >
       <div className="process-intro">
-        <h2 id="process-title">So läuft dein Workshop ab</h2>
+        <h2 id="process-title">So läuft dein mobiler Kerzenworkshop ab</h2>
         <p>Du gestaltest. Wir begleiten dich.</p>
       </div>
       <ol className="process-steps">
@@ -203,7 +271,7 @@ export function WhatsIncluded() {
       <div className="price-story">
         <p className="eyebrow">ÖFFENTLICHER WORKSHOP</p>
         <h2 id="price-title">
-          Dein Kearly <em>Candle Workshop</em>
+          Preis &amp; Leistungen im <em>Candle Workshop</em>
         </h2>
         <div className="price-amount">
           <strong>39 €</strong>
@@ -242,13 +310,16 @@ export function WorkshopDates() {
       aria-labelledby="dates-title"
     >
       <div>
-        <h2 id="dates-title">Wochenendtermine auf Anfrage</h2>
+        <h2 id="dates-title">
+          Wochenendtermine in {workshopConfig.location.city} &amp; Umgebung (bis{" "}
+          {workshopConfig.location.radiusKm} km)
+        </h2>
       </div>
       <div className="dates-content">
         <p>
-          Ich komme zu euch im Umkreis von {workshopConfig.location.radiusKm} km
-          um {workshopConfig.location.city}. Für weitere Anfahrten fällt eine
-          Anfahrtspauschale an.
+          Ich komme am Wochenende zu euch im Umkreis von{" "}
+          {workshopConfig.location.radiusKm} km um {workshopConfig.location.city}.
+          Für weitere Anfahrten fällt eine Anfahrtspauschale an.
         </p>
         <a href="#anfrage" className="text-link">
           Workshop anfragen <Arrow diagonal />
@@ -305,7 +376,7 @@ export function WorkshopFAQ() {
       <div>
         <p className="eyebrow">GUT ZU WISSEN</p>
         <h2 id="faq-title">
-          Noch eine <em>Frage?</em>
+          Häufige Fragen zum <em>Kerzenworkshop</em>
         </h2>
       </div>
       <div className="faq-list">
@@ -358,9 +429,13 @@ export function WorkshopFooter() {
           Mit Liebe gegossen.
         </p>
         <nav aria-label="Footernavigation">
-          <a href="#gestalten">Formen-Kategorien</a>
-          <a href="#workshop">Workshop & Preis</a>
-          <a href="#privat">Private Workshops</a>
+          <a href="/">Kearly Startseite</a>
+          <a href="/wedding/">Kearly Wedding</a>
+          <a href="#ueberblick">Überblick</a>
+          <a href="#gestalten">Formenwelten</a>
+          <a href="#workshop">Preis &amp; Leistungen</a>
+          <a href="#privat">Private Gruppen</a>
+          <a href="#faq">FAQ</a>
         </nav>
       </div>
       <div className="footer-bottom">
